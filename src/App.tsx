@@ -2,16 +2,19 @@ import React from 'react';
 import Routes from './routes';
 import './App.css';
 
-import { Container, Header, Content, Footer } from './style/layout';
+import { Container, Header, Content, Footer } from './style/app-layout';
+import { TopMenu } from './components/';
 
 function App() {
   return (
     <Container>
-      <Header></Header>
+      <Header>
+        <TopMenu />
+      </Header>
       <Content>
         <Routes />
       </Content>
-      <Footer>FOOTER</Footer>
+      <Footer />
     </Container>
   );
 }

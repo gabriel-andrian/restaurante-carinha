@@ -8,7 +8,8 @@ const Routes = () => {
       <Route path="/register">Register</Route>
       <Route path="/menu">
         <div style={{ height: '1000px' }}>
-          <div>oi</div>
+          <div>Oi</div>
+          <div>Simples assim!</div>
         </div>
       </Route>
       <Route path="/sub-menu-items">Sub Menu Items</Route>
