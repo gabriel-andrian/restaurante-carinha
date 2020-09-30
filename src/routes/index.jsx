@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { Card } from '../components/styled-common';
 
 const Routes = () => {
   return (
@@ -7,9 +8,67 @@ const Routes = () => {
       <Route path="/login">Login</Route>
       <Route path="/register">Register</Route>
       <Route path="/menu">
-        <div style={{ height: '1000px' }}>
-          <div>Oi</div>
-          <div>Simples assim!</div>
+        <div
+          style={{
+            height: '1000px',
+            display: 'flex',
+            flexFlow: 'row wrap',
+            alignItems: 'center',
+            alignContent: 'flex-start',
+            justifyContent: 'space-around',
+          }}>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
+          <Card>
+            <div>Oi</div>
+            <div>Simples assim!</div>
+          </Card>
         </div>
       </Route>
       <Route path="/sub-menu-items">Sub Menu Items</Route>
