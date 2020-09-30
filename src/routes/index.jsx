@@ -10,7 +10,7 @@ const Routes = () => {
       <Route path="/menu">
         <div
           style={{
-            height: '1000px',
+            height: '100%',
             display: 'flex',
             flexFlow: 'row wrap',
             alignItems: 'center',
