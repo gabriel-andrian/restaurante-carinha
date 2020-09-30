@@ -1,21 +1,20 @@
 import React from 'react';
-import { ContainerFooterMenu } from './styled.js';
+import { FooterDiv, FooterButton } from './helper.js';
 
-// O componente abaixo foi criado para teste, necessita ser ou refeito, ou adaptado para corresponder ao protótipo do figma;
-interface Props{
-  actions?: Array<React.ReactNode>
-}
+import { BsFillBellFill, BsClockHistory } from 'react-icons/bs';
+import { MdRestaurantMenu } from 'react-icons/md';
 
-const FooterMenu = ({ actions = [] }:Props) => {
-  console.log(actions)
+const FooterMenu = () => {
   return (
-    <ContainerFooterMenu>
-      {actions.map((item, index) => (
-        <span key={index}>
-          {item}
-        </span>
-      ))}
-    </ContainerFooterMenu>
+
+      <FooterDiv
+        actions={[
+          <FooterButton link="order" title="Order" icon={<BsFillBellFill />} />,
+          <FooterButton link="menu" title="Menu" icon={<MdRestaurantMenu />} />,
+          <FooterButton link="history" title="History" icon={<BsClockHistory />} />,
+        ]}
+      />
+
   );
 };
 
