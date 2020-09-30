@@ -7,7 +7,6 @@ interface Props{
 }
 
 const FooterDiv = ({ actions = [] }:Props) => {
-  console.log(actions)
   return (
     <ContainerFooterMenu>
       {actions.map((item, index) => (
