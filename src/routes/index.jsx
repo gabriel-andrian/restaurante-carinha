@@ -1,11 +1,16 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
+import { ProductRegistration } from '../components/index.js';
 import { Card } from '../components/styled-common';
 import { CardToOrder } from '../components';
 
 const Routes = () => {
   return (
     <Switch>
+      <Route path="/product-registration">
+        <ProductRegistration />
+      </Route>
       <Route path="/login">Login</Route>
       <Route path="/register">Register</Route>
       <Route path="/menu">
