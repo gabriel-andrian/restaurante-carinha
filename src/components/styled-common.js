@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const Card = styled.div`
   margin: 15px;
   width: 90%;
-  min-height: 125px;
-  height: fit-content;
+  height: 125px;
+  min-height: fit-content;
   border-radius: 8px;
-  border: 1px dashed navy;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   @media (min-width: 450px) {
     width: 300px;
