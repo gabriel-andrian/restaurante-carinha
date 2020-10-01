@@ -3,7 +3,8 @@ import Routes from './routes';
 import './App.css';
 
 import { Container, Header, Content, Footer } from './style/app-layout';
-import { TopMenu } from './components/';
+import { FooterMenu, TopMenu} from './components/';
+
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       <Content>
         <Routes />
       </Content>
-      <Footer />
+      <Footer>
+       <FooterMenu/>
+      </Footer>
     </Container>
   );
 }
