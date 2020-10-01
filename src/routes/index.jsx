@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import { ProductRegistration } from '../components/index.js';
 import { Card } from '../components/styled-common';
-import { CardToOrder } from '../components';
+import { CardToOrder, Drawer } from '../components';
 
 const Routes = () => {
   return (
@@ -11,6 +11,7 @@ const Routes = () => {
       <Route path="/product-registration">
         <ProductRegistration />
       </Route>
+      <Route path="/drawer"><Drawer/></Route>
       <Route path="/login">Login</Route>
       <Route path="/register">Register</Route>
       <Route path="/menu">
