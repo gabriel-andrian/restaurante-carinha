@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Card } from '../components/styled-common';
+import { CardToOrder } from '../components';
 
 const Routes = () => {
   return (
@@ -72,8 +73,26 @@ const Routes = () => {
         </div>
       </Route>
       <Route path="/sub-menu-items">Sub Menu Items</Route>
-      <Route path="/sub-menu">Sub Menu</Route>
-      <Route path="/order">Order</Route>
+      <Route path="/sub-menu">
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            flexFlow: 'row wrap',
+            alignContent: 'center',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <CardToOrder />
+          <CardToOrder />
+          <CardToOrder />
+          <CardToOrder />
+          <CardToOrder />
+          <CardToOrder />
+          <CardToOrder />
+        </div>
+      </Route>
+      <Route path="/order"></Route>
       <Route path="/history">History</Route>
       <Route path="/" />
     </Switch>
