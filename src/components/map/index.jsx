@@ -6,7 +6,7 @@ import CardToOrder from '../card-to-roder';
 
 const Map = (value) => {
     const [cardapio, setCardapio] = useState([]);
-    const [search, setSearch] = useState("pizza");
+    const [search, setSearch] = useState("suco");
 
     const url = `https://json-server-order-here.herokuapp.com`;
     const api = axios.create({
@@ -68,7 +68,7 @@ const Map = (value) => {
                         </Wrapper>
                     </Card>
                 ))
-            }
+                }
             </div>
             {showCardapio()}
         </>
