@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card } from '../styled-common';
 import { Content, CardImage, Wrapper, Title, Description, Price } from './styled';
+import CardToOrder from '../card-to-roder';
 
 const Map = (value) => {
     const [cardapio, setCardapio] = useState([]);
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState("pizza");
 
     const url = `https://json-server-order-here.herokuapp.com`;
     const api = axios.create({
@@ -13,27 +14,50 @@ const Map = (value) => {
         headers: { "Content-Type": "application/json" },
     });
 
-    api
-            .get("/products?category_like=pizza")
+    const showCardapio = () => {
+        api
+            .get(`/products?category_like=${search}`)
             .then((res) => {
                 setCardapio(res.data);
-
+                console.log(cardapio);
             });
+    }
 
-    // useEffect(() => {
-    //     console.log(cardapio);
-    // }, [cardapio]);
+    const setSearchValue = (e) => {
+        setSearch(e.target.value)
+    }
+
+    const submitSearch = (e) => {
+        e.preventDefault()
+    }
+
+    // const handleKeyPress = (event) => {
+    //     if(event.key === 'Enter'){
+    //         showCardapio();
+    //     }
+    // }
+
+    useEffect(() => {
+        console.log(cardapio);
+    }, [cardapio]);
 
     return (
         <>
-            {/* <div>
-                <button onClick={showCardapio}>Teste</button>
-            </div> */}
-            <div>
-            {
+            {/* <form onSubmit={submitSearch}>
+                <input onChange={(e) => setSearchValue(e)} value={search} onKeyPress={handleKeyPress}></input>
+            </form> */}
+            <div
+                style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexFlow: 'row wrap',
+                    alignContent: 'center',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}>
+                {
                 cardapio && cardapio.map((item, index) => (
-                    <div>
-                        <Card key={index}>
+                    <Card key={index}>
                         <Wrapper>
                             <CardImage image={item.img} />
                             <Content>
@@ -43,16 +67,12 @@ const Map = (value) => {
                             </Content>
                         </Wrapper>
                     </Card>
-                    </div>
                 ))
             }
             </div>
+            {showCardapio()}
         </>
     )
 };
 
 export default Map;
-
-// pokeCards && pokeCards.map((card, index) => (
-//     <img key={index} src={card.imageUrl} />
-// ))
