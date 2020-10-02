@@ -1,4 +1,5 @@
 import CardToOrder from './card-to-order';
+import CategoryCard from './category-card';
 import Drawer from './drawer';
 import FooterMenu from './footer-menu';
 import FooterButton from './footer-menu/footer-button';
@@ -16,4 +17,5 @@ export {
   Drawer,
   UserRegForm,
   UserLoginForm,
+  CategoryCard,
 };
