@@ -1,16 +1,17 @@
 import React from 'react';
+
 import { Card } from '../styled-common';
 import { Content, CardImage, Wrapper, Title, Description, Price } from './styled';
 
-interface Params {
+interface Props {
   onClick?: () => void;
-  title?: String;
-  description?: String;
-  img?: String;
-  price?: Number;
+  title?: string;
+  description?: string;
+  img?: string;
+  price?: number;
 }
 
-const CardToOrder = ({ onClick, title, description, img, price }: Params) => {
+const CardToOrder = ({ onClick, title, description, img, price }: Props) => {
   return (
     <Card>
       <Wrapper>
