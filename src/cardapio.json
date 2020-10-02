@@ -1,0 +1,260 @@
+{
+  "products": [
+    {
+      "name": "Club kharina",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291043_gjlM_c.jpg",
+      "description": "Sanduíche aberto no prato com ovo, batatas fritas tipo noisette e smashed burger. Mix de folhas verdes, tomate, pepino agridoce, queijo prato derretido, bacon tostado, maionese e pão de forma tostado.",
+      "price": 35.5,
+      "category": "classicos",
+      "id": 1
+    },
+    {
+      "name": "Club rock",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291041_EP5L_c.jpg",
+      "description": "Sanduíche aberto no prato com ovo, batatas fritas tipo noisette e smashed burger. Mix de folhas verdes, tomate, cebola caramelizada com barbecue, pepino agridoce, queijo prato derretido, bacon tostado, maionese e pão de forma tostado",
+      "price": 39.8,
+      "category": "classicos",
+      "id": 2
+    },
+    {
+      "name": "Club chicken",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001300946_gEfe_c.jpg",
+      "description": "Sanduíche aberto no prato com ovo, batatas fritas tipo noisette e frango grelhado. Mix de folhas verdes, tomate, pepino agridoce, queijo prato derretido, bacon tostado, maionese e pão de forma tostado.",
+      "price": 35.5,
+      "category": "classicos",
+      "id": 3
+    },
+    {
+      "name": "Club mignon",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291041_FLq4_c.jpg",
+      "description": "Sanduíche aberto no prato com ovo, batatas fritas tipo noisette e mignon grelhado. Mix de folhas verdes, tomate, cebola caramelizada com barbecue, pepino agridoce, queijo prato derretido, bacon tostado, maionese e pão de forma tostado.",
+      "price": 39.8,
+      "category": "classicos",
+      "id": 4
+    },
+    {
+      "name": "Bife de chorizo",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202003200853_rEoF_g.jpg",
+      "description": "Bife de chorizo - acompanha arroz branco e batata rústica",
+      "price": 59.8,
+      "category": "steaks",
+      "id": 5
+    },
+    {
+      "name": "Entrecôte",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202003200914_X6uR_r.jpg",
+      "description": "Entrecôte - acompanha spaghetti na manteiga e fritas",
+      "price": 59.8,
+      "category": "steaks",
+      "id": 6
+    },
+    {
+      "name": "Frango",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202003200855_iEYN_k.jpg",
+      "description": "Frango - acompanha arroz branco e fritas",
+      "price": 37.5,
+      "category": "steaks",
+      "id": 7
+    },
+    {
+      "name": "Mignon",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202003200900_21Cq_m.png",
+      "description": "Mignon - acompanha arroz branco e farofa",
+      "price": 49.5,
+      "category": "steaks",
+      "id": 8
+    },
+    {
+      "name": "Picanha",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202003200900_kEiZ_g.jpg",
+      "description": "Picanha - acompanha arrozbranco e batata rústica",
+      "price": 59.8,
+      "category": "steaks",
+      "id": 9
+    },
+    {
+      "name": "Batata noisette média",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291044_1vW8_n.jpg",
+      "description": "Batata noisette média. Acompanha: maionese especial KHARINA.",
+      "price": 14.9,
+      "category": "entrada",
+      "id": 10
+    },
+    {
+      "name": "Buffalo wings",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202002120910_21Tn_k.jpg",
+      "description": "Coxinha de frango temperada com molho picante de barbecue. Acompanha: maionese especial Kharina.",
+      "price": 37.5,
+      "category": "entrada",
+      "id": 11
+    },
+    {
+      "name": "Chicken crispy",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291048_X0UI_c.jpg",
+      "description": "02 Filés de frango empanados acompanhados de maionese especial KHARINA.",
+      "price": 24.5,
+      "category": "entrada",
+      "id": 12
+    },
+    {
+      "name": "Kibe frito",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291049_rmjz_k.jpg",
+      "description": "06 unidades. Acompanha: molho de limão.",
+      "price": 18.5,
+      "category": "entrada",
+      "id": 13
+    },
+    {
+      "name": "Mini pastéis",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162009_wBlO_m.jpg",
+      "description": "06 unidades: 02 de carne; 02 de queijo; 02 mistos. acompanha: geleia de pimenta.",
+      "price": 16.5,
+      "category": "entrada",
+      "id": 14
+    },
+    {
+      "name": "Salada caesar pequena",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291050_GdMS_s.jpg",
+      "description": "Tradicional mix de folhas verdes acompanhado de croutons e coberto com parmesão, além do nosso típico molho caesar artesanal.",
+      "price": 12.5,
+      "category": "entrada",
+      "id": 15
+    },
+    {
+      "name": "Tiras de batata temperadas",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291051_enJX_t.jpg",
+      "description": "Acompanha: geleia de pimenta e maionese especial KHARINA.",
+      "price": 19.5,
+      "category": "entrada",
+      "id": 16
+    },
+    {
+      "name": "Tiras de picanha",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291051_FxxI_p.jpg",
+      "description": "Acompanha: farofa, maionese especial KHARINA e pão crocante.",
+      "price": 57.5,
+      "category": "entrada",
+      "id": 17
+    },
+    {
+      "name": "Apple pie",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291104_LAcD_a.jpg",
+      "description": "Torta de maçã.",
+      "price": 19.8,
+      "category": "sobremesa",
+      "id": 18
+    },
+    {
+      "name": "Brownie",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162116_kiWT_b.jpg",
+      "description": "Brownie de chocolate.",
+      "price": 17.5,
+      "category": "sobremesa",
+      "id": 19
+    },
+    {
+      "name": "Minibrigadeiro",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291104_hqSV_m.jpg",
+      "description": "Minibrigadeiro para comer com colher.",
+      "price": 4.5,
+      "category": "sobremesa",
+      "id": 20
+    },
+    {
+      "name": "Coca-cola - 350ml",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162115_tGWu_r.jpg",
+      "description": "",
+      "price": 6.4,
+      "category": "bebida",
+      "id": 21
+    },
+    {
+      "name": "Sprite - 350ml",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162115_tGWu_r.jpg",
+      "description": "",
+      "price": 6.4,
+      "category": "bebida",
+      "id": 22
+    },
+    {
+      "name": "Fanta Laranja - 350ml",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162115_tGWu_r.jpg",
+      "description": "",
+      "price": 6.4,
+      "category": "bebida",
+      "id": 23
+    },
+    {
+      "name": "Soda italiana - 400ml",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291107_7qdS_s.png",
+      "description": "Cranberry.",
+      "price": 8.0,
+      "category": "bebida",
+      "id": 24
+    },
+    {
+      "name": "Suco de Laranja - 400ml",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162115_ojO0_s.jpg",
+      "description": "",
+      "price": 9.0,
+      "category": "bebida",
+      "id": 25
+    },
+    {
+      "name": "Água sem gás",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162115_Dt4K_a.jpg",
+      "description": "",
+      "price": 4.8,
+      "category": "bebida",
+      "id": 26
+    },
+    {
+      "name": "",
+      "img": "",
+      "description": "",
+      "price": 0,
+      "category": "",
+      "id": 0
+    },
+    {
+      "name": "",
+      "img": "",
+      "description": "",
+      "price": 0,
+      "category": "",
+      "id": 0
+    },
+    {
+      "name": "",
+      "img": "",
+      "description": "",
+      "price": 0,
+      "category": "",
+      "id": 0
+    },
+    {
+      "name": "",
+      "img": "",
+      "description": "",
+      "price": 0,
+      "category": "",
+      "id": 0
+    },
+    {
+      "name": "",
+      "img": "",
+      "description": "",
+      "price": 0,
+      "category": "",
+      "id": 0
+    },
+    {
+      "name": "",
+      "img": "",
+      "description": "",
+      "price": 0,
+      "category": "",
+      "id": 0
+    }
+  ]
+}
