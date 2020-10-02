@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import { ProductRegistration } from '../components/index.js';
 import { Card } from '../components/styled-common';
 import { CardToOrder, Drawer } from '../components';
+import Map from '../components/map';
 
 const Routes = () => {
   return (
@@ -100,6 +101,7 @@ const Routes = () => {
       </Route>
       <Route path="/order"></Route>
       <Route path="/history">History</Route>
+      <Route path="/map"><Map /></Route>
       <Route path="/" />
     </Switch>
   );
