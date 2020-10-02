@@ -1,3 +1,5 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
-export default combineReducers({});
+import { categories } from './get-categories';
+
+export default combineReducers({ categories });
