@@ -1,4 +1,4 @@
-import CardToOrder from './card-to-roder';
+import CardToOrder from './card-to-order';
 import Drawer from './drawer';
 import FooterMenu from './footer-menu';
 import FooterButton from './footer-menu/footer-button';
