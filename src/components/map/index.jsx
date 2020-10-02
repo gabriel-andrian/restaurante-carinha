@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card } from '../styled-common';
 import { Content, CardImage, Wrapper, Title, Description, Price } from './styled';
-import CardToOrder from '../card-to-roder';
 
 const Map = (value) => {
     const [cardapio, setCardapio] = useState([]);
@@ -30,12 +29,6 @@ const Map = (value) => {
     const submitSearch = (e) => {
         e.preventDefault()
     }
-
-    // const handleKeyPress = (event) => {
-    //     if(event.key === 'Enter'){
-    //         showCardapio();
-    //     }
-    // }
 
     useEffect(() => {
         console.log(cardapio);
