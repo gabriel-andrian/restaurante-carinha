@@ -1,4 +1,4 @@
-import GET_CATEGORIES from '../actions/get-categories';
+import { GET_CATEGORIES } from '../actions/get-menu';
 
 const defaultState = {};
 

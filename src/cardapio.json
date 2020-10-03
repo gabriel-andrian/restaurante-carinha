@@ -258,3 +258,20 @@
     }
   ]
 }
+
+// /* <CategoryCard
+//             name="Pizzas"
+//             img="https://www.tribunapr.com.br/wp-content/uploads/2020/01/20151654/Conteudo_01_658408219-1-970x550.jpg"
+//           />
+//           <CategoryCard
+//             name="Hambúrgueres"
+//             img="https://uploads.metropoles.com/wp-content/uploads/2020/07/01185056/dois-deliciosos-hamburguer-caseiro-de-dar-agua-na-boca_152625-8.jpg"
+//           />
+//           <CategoryCard
+//             name="Sobremesas"
+//             img="https://www.mavalerio.com.br/wp-content/uploads/2018/12/170914_receitas-032-low-500x340.jpg"
+//           />
+//           <CategoryCard
+//             name="Drinks"
+//             img="https://lh3.googleusercontent.com/proxy/vUKrIEFadc8hCWI_xGOm-FkFUtldxaDrTirzOzzNbTErtgSC-1PoSS6NRNW7C9IdZcRGfAsFd-JulxVMhxZqyiSKKEEo8hLH3X6_SryAv6RZrREN3SwSBifjuEpKBc9wgAiwCECtq2lhiss4nAYNOvKu"
+//           /> */
