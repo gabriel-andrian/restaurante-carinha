@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Image, Title } from './styled';
+
 import { Card } from '../styled-common';
+import { Container, Image, Title } from './styled';
 
 interface CategoryProps {
   name: string;
@@ -10,7 +11,7 @@ interface CategoryProps {
 
 const CategoryCard = ({ name, img, onClick }: CategoryProps) => {
   return (
-    <Card>
+    <Card onClick={onClick}>
       <Container>
         <Image image={img} />
         <Title>{name}</Title>

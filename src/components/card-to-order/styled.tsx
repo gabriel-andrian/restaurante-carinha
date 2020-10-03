@@ -18,7 +18,7 @@ export const CardImage = styled.div`
   display: inline-block;
   height: 100%;
   width: 40%;
-  background-image: url(${({ image }: Props) => image});
+  background-image: url('${({ image }: Props) => image}');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
