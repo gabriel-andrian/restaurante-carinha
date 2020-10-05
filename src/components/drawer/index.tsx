@@ -11,28 +11,32 @@ import {
 } from './styled';
 
 interface Props {
-  visible?: boolean | string;
+  setVisibleDrawer?: any;
+  visible?: boolean;
   width?: number;
-  children?: React.ReactNode;
-  actions?: Array<React.ReactNode>
+  actions?: Array<React.ReactNode>;
 }
 
-const Drawer = ({ visible = false, width = 800, actions=[<div>More info</div>, <div>Report</div>], children = 'Teste' }: Props) => {
-  const [drawerVisible, setDrawerVisible] = useState(visible);
-
+const Drawer = ({
+  setVisibleDrawer,
+  visible,
+  width = 800,
+  actions = [<div>More info</div>, <div>Report</div>],
+}: Props) => {
   const DrawerContainer = styled.div`
-    display: ${drawerVisible ? 'block' : 'none'};
+    display: ${visible ? 'block' : 'none'};
     position: absolute;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 3;
     top: 0;
+    left: 0;
     animation: ${animMask} 0.2s linear;
   `;
 
   const DrawerContent = styled.div`
-    display: ${drawerVisible ? 'block' : 'none'};
+    display: ${visible ? 'block' : 'none'};
     width: ${width}px;
     height: 100%;
     background-color: white;
@@ -48,11 +52,13 @@ const Drawer = ({ visible = false, width = 800, actions=[<div>More info</div>, <
           <InnerDrawerContent>
             <TitleDrawerContent />
             <BottomDrawerContent>
-              {actions.map((item,index)=><span key={index}>{item}</span>)}
+              {actions.map((item, index) => (
+                <span key={index}>{item}</span>
+              ))}
             </BottomDrawerContent>
           </InnerDrawerContent>
         </DrawerContent>
-        <CancelArea onClick={() => setDrawerVisible(false)} />
+        <CancelArea onClick={() => setVisibleDrawer(false)} />
       </SubDrawer>
     </DrawerContainer>
   );
