@@ -13,14 +13,15 @@ const Routes = () => {
   const params = useParams();
   const categories = useSelector((state) => state.categories.categoriesData);
   const products = useSelector((state) => state.products.productsData);
+  const items = useSelector((state) => state);
 
   useEffect(() => {
     location.pathname.endsWith('menu') && dispatch(requestMenu());
   }, [location]);
 
   useEffect(() => {
-    console.log(params);
-  }, [params]);
+    console.log(items);
+  }, [items]);
 
   return (
     <div>
