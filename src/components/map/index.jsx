@@ -1,71 +1,116 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Card } from '../styled-common';
-import { Content, CardImage, Wrapper, Title, Description, Price } from './styled';
+import React, { useState } from 'react';
+import CategoryCard from '../category-card';
+import CardToOrder from '../card-to-order';
 
-const Map = (props) => {
-    const [cardapio, setCardapio] = useState([]);
-    const [search, setSearch] = useState("");
+const Map = ({ data, type }) => {
+    const [cardapio, setCardapio] = useState(data);
 
-    const url = `https://json-server-order-here.herokuapp.com`;
-    const api = axios.create({
-        baseURL: url,
-        headers: { "Content-Type": "application/json" },
-    });
+    // const [search, setSearch] = useState("bebida");
+    // const url = `https://json-server-order-here.herokuapp.com`;
+    // const api = axios.create({
+    //     baseURL: url,
+    //     headers: { "Content-Type": "application/json" },
+    // });
 
-    const showCardapio = () => {
-        api
-            .get(`/products?category_like=${search}`)
-            .then((res) => {
-                setCardapio(res.data);
-                console.log(cardapio);
-            });
+    // const showCardapio = () => {
+    //     api
+    //         .get(`/products?category_like=${search}`)
+    //         .then((res) => {
+    //             setCardapio(res.data);
+    //         });
+    // }
+
+    // useEffect(() => {
+    //     showCardapio();
+    //     console.log(cardapio);
+    //     console.log(data);
+    // }, []);
+
+
+    if (type === "category") {
+        return (
+            <>
+                <div
+                    style={{
+                        width: '100%',
+                        display: 'flex',
+                        flexFlow: 'row wrap',
+                        alignContent: 'center',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                    {
+                        cardapio && cardapio.map((index, item) => {
+                            return (
+                            <CategoryCard
+                                key={index}
+                                name={item.name}
+                                img={item.img}
+                            />
+                        )})
+                    }
+                </div>
+            </>
+        )
     }
 
-    const setSearchValue = (e) => {
-        setSearch(e.target.value)
+    else if (type === "sub-menu") {
+        return (
+            <>
+                <div
+                    style={{
+                        width: '100%',
+                        display: 'flex',
+                        flexFlow: 'row wrap',
+                        alignContent: 'center',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                    {
+                        cardapio && cardapio.map((index, item) => {
+                            return (
+                                <CardToOrder
+                                key={index}
+                                title={item.name}
+                                description={item.description}
+                                img={item.img}
+                                price={item.price}
+                            />
+                        )})
+                    }
+                </div>
+            </>
+        )
     }
 
-    const submitSearch = (e) => {
-        e.preventDefault()
-    }
-
-    useEffect(() => {
-        console.log(cardapio);
-    }, [cardapio]);
-
-    return (
-        <>
-            {/* <form onSubmit={submitSearch}>
-                <input onChange={(e) => setSearchValue(e)} value={search} onKeyPress={showCardapio}></input>
-            </form> */}
-            <div
-                style={{
-                    width: '100%',
-                    display: 'flex',
-                    flexFlow: 'row wrap',
-                    alignContent: 'center',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}>
-                {
-                cardapio && cardapio.map((item, index) => (
-                    <Card key={index}>
-                        <Wrapper>
-                            <CardImage image={item.img} />
-                            <Content>
-                                <Title>{item.product}</Title>
-                                <Description>{item.description}</Description>
-                                <Price>{item.price}</Price>
-                            </Content>
-                        </Wrapper>
-                    </Card>
-                ))
-                }
-            </div>
-            {/* {showCardapio()} */}
-        </>
-    )
+    // return (
+    //     <>
+    //         <div
+    //             style={{
+    //                 width: '100%',
+    //                 display: 'flex',
+    //                 flexFlow: 'row wrap',
+    //                 alignContent: 'center',
+    //                 alignItems: 'center',
+    //                 justifyContent: 'center',
+    //             }}>
+    //             {
+    //                 cardapio && cardapio.map((item, index) => (
+    //                     <Card key={index}>
+    //                         <Wrapper>
+    //                             <CardImage image={item.img} />
+    //                             <Content>
+    //                                 <Title>{item.name}</Title>
+    //                                 <Description>{item.description}</Description>
+    //                                 <Price>{item.price}</Price>
+    //                             </Content>
+    //                         </Wrapper>
+    //                     </Card>
+    //                 ))
+    //             }
+    //         </div>
+    //     </>
+    // )
 };
 
 export default Map;
