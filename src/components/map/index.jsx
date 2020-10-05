@@ -3,9 +3,9 @@ import axios from 'axios';
 import { Card } from '../styled-common';
 import { Content, CardImage, Wrapper, Title, Description, Price } from './styled';
 
-const Map = (value) => {
+const Map = (props) => {
     const [cardapio, setCardapio] = useState([]);
-    const [search, setSearch] = useState("suco");
+    const [search, setSearch] = useState("");
 
     const url = `https://json-server-order-here.herokuapp.com`;
     const api = axios.create({
@@ -37,7 +37,7 @@ const Map = (value) => {
     return (
         <>
             {/* <form onSubmit={submitSearch}>
-                <input onChange={(e) => setSearchValue(e)} value={search} onKeyPress={handleKeyPress}></input>
+                <input onChange={(e) => setSearchValue(e)} value={search} onKeyPress={showCardapio}></input>
             </form> */}
             <div
                 style={{
@@ -63,7 +63,7 @@ const Map = (value) => {
                 ))
                 }
             </div>
-            {showCardapio()}
+            {/* {showCardapio()} */}
         </>
     )
 };

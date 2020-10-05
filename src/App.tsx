@@ -14,8 +14,8 @@ function App() {
       </Header>
       <Content>
         <Routes />
-        <UserRegForm />
-        <UserLoginForm />
+        {/* <UserRegForm />
+        <UserLoginForm /> */}
       </Content>
 
       <Footer>
