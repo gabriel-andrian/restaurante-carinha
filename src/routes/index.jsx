@@ -28,9 +28,6 @@ const Routes = () => {
         <Route path="/product-registration">
           <ProductRegistration />
         </Route>
-        <Route path="/drawer">
-          <Drawer />
-        </Route>
         <Route path="/login">Login</Route>
         <Route path="/register">Register</Route>
         <Route path="/menu">
