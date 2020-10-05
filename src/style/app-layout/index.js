@@ -18,7 +18,7 @@ export const Header = styled.div`
   width: 100vw;
   height: 8vh;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 2;
+  z-index: 3;
 
   @media (min-width: 450px) {
     height: 100px;
