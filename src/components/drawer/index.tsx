@@ -12,7 +12,7 @@ import {
 
 interface Props {
   setVisibleDrawer?: any;
-  visible?: boolean | any;
+  visible?: boolean;
   width?: number;
   actions?: Array<React.ReactNode>;
 }
