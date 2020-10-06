@@ -4,6 +4,7 @@ import { Switch, Route, useLocation, useHistory, useParams } from 'react-router-
 
 import { CardToOrder, Drawer, CategoryCard, ProductRegistration, CardItem } from '../components';
 import { Card } from '../components/styled-common';
+import Map from '../components/map';
 import { requestMenu } from '../redux/actions/get-menu';
 
 const Routes = () => {
@@ -77,7 +78,7 @@ const Routes = () => {
                   <CardToOrder
                     title={name}
                     img={img}
-                    description={description}
+                    // description={description}
                     price={price}
                     key={key}
                   />
@@ -87,6 +88,7 @@ const Routes = () => {
         </Route>
         <Route path="/order" />
         <Route path="/history">History</Route>
+        <Route path="/map">< Map data={"category"} /></Route>
         <Route path="/" />
       </Switch>
   );

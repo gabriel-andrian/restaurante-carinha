@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 interface Props {
@@ -8,15 +8,26 @@ interface Props {
   image?: string;
 }
 
-const CardItem = ({ title, description, price, image }: Props) => {
+const CardItem = ({ title, description = 'Uma delícia', price = 9.2, image }: Props) => {
+  const [amount, setAmount] = useState(1);
   return (
     <Container>
       <Card>
-        <Header><img style={{width:'100%', height:'100%', borderRadius:'20px 20px 0 0'}} src='https://www.tribunapr.com.br/wp-content/uploads/2020/01/20151654/Conteudo_01_658408219-1-970x550.jpg' alt=''/></Header>
-        <Content>Content</Content>
+        <Header>
+          <img
+            style={{ maxWidth: '70%', borderRadius: '20px 20px 0 0' }}
+            src="https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291041_EP5L_c.jpg"
+            alt=""
+          />
+        </Header>
+        <Content>{description}</Content>
         <Footer>
-          <div>a</div>
-          <button>Adicionar</button>
+          <div>
+            <AmountButton onClick={() => amount > 1 && setAmount(amount - 1)}>-</AmountButton>
+            {amount}
+            <AmountButton onClick={() => setAmount(amount + 1)}>+</AmountButton>
+          </div>
+          <AddButton>Adicionar R$ {(amount * price).toFixed(2)}</AddButton>
         </Footer>
       </Card>
     </Container>
@@ -27,10 +38,28 @@ const Centralized = `
     justify-content:center;
     align-items:center;
 `;
+const ButtonDefault = `
+  outline:none;
+  border:none;
+`;
+const AmountButton = styled.button`
+  ${ButtonDefault}
+  margin:0 10px;
+  background-color: #ccc;
+  width: 40px;
+  height: 35px;
+`;
+const AddButton = styled.button`
+  ${ButtonDefault}
+  width:140px;
+  height: 50px;
+  color: white;
+  background-color: #4caf50;
+`;
 const Content = styled.div`
-  ${Centralized};
-  color:gray;
-  height: 50%;
+  text-align: center;
+  color: gray;
+  height: 40%;
   width: 100%;
 `;
 const Header = styled.div`
@@ -38,25 +67,26 @@ const Header = styled.div`
   height: 30%;
   width: 100%;
   border-radius: 20px 20px 0 0;
+  overflow: hidden;
 `;
 const Footer = styled.div`
   ${Centralized};
-  display:flex;
-  justify-content:space-around;
+  display: flex;
+  justify-content: space-around;
   height: 20%;
   width: 100%;
-  border-radius:0 0 20px 20px;
+  border-radius: 0 0 20px 20px;
 `;
 const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 80%;
   height: 95%;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 5px 5px rgba(0,0,0,.2);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 `;
 const Container = styled.div`
   ${Centralized};
