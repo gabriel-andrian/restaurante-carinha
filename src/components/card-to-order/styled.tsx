@@ -32,6 +32,8 @@ export const Content = styled.div`
   justify-content: space-around;
   align-content: center;
   align-items: center;
+  max-height: 95%;
+  overflow: hidden;
 `;
 
 export const Title = styled.div`
@@ -43,11 +45,17 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.div`
-  padding: 2px;
+  margin: 8px;
   text-align: center;
   font-weight: 300;
   font-size: 12px;
   color: #a0a0a0;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; ;
 `;
 
 export const Price = styled.div`
