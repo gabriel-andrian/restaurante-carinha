@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Switch, Route, useLocation, useHistory, useParams } from 'react-router-dom';
 
-import { CardToOrder, Drawer, CategoryCard, ProductRegistration } from '../components';
+import { CardToOrder, Drawer, CategoryCard, ProductRegistration, CardItem } from '../components';
 import { Card } from '../components/styled-common';
 import { requestMenu } from '../redux/actions/get-menu';
 
@@ -24,10 +24,12 @@ const Routes = () => {
   }, [items]);
 
   return (
-    <div>
       <Switch>
         <Route path="/product-registration">
           <ProductRegistration />
+        </Route>
+        <Route path="/item">
+          <CardItem/>
         </Route>
         <Route path="/login">Login</Route>
         <Route path="/register">Register</Route>
@@ -87,7 +89,6 @@ const Routes = () => {
         <Route path="/history">History</Route>
         <Route path="/" />
       </Switch>
-    </div>
   );
 };
 
