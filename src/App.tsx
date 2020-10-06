@@ -4,7 +4,7 @@ import Routes from './routes';
 import './App.css';
 
 import { Container, Header, Content, Footer } from './style/app-layout';
-import { FooterMenu, TopMenu, UserRegForm, UserLoginForm } from './components/';
+import { FooterMenu, TopMenu } from './components/';
 
 function App() {
   return (

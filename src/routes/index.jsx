@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Switch, Route, useLocation, useHistory, useParams } from 'react-router-dom';
-import { CardToOrder, CategoryCard, ProductRegistration } from '../components';
+import { CardToOrder, Drawer, CategoryCard, ProductRegistration } from '../components';
+import Map from '../components/map';
 import { requestMenu } from '../redux/actions/get-menu';
 
 const Routes = () => {
@@ -85,6 +86,9 @@ const Routes = () => {
       <Route path="/sub-menu-items">Sub Menu Items</Route>
       <Route path="/order" />
       <Route path="/history">History</Route>
+      <Route path="/map">
+        <Map data={'category'} />
+      </Route>
       <Route path="/" />
     </Switch>
   );
