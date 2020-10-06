@@ -34,9 +34,9 @@ const CardItem = ({
   image = 'https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291041_EP5L_c.jpg',
 }: Props) => {
   const [amount, setAmount] = useState(1);
-  const handleClick = () => {
-
-  }
+  const [note, setNote] = useState('');
+  const handleClick = () => {};
+  console.log(note);
   return (
     <Container>
       <img style={{ width: '100%' }} src={image} />
@@ -45,29 +45,57 @@ const CardItem = ({
         <div style={{ padding: '15px' }}>{description}</div>
       </div>
 
-      <input placeholder="Observações" />
+      <input onChange={(e) => setNote(e.target.value)} placeholder="Observações" />
 
       <div
-        style={{ display: 'flex', flexFlow: 'row', width: '100%', justifyContent: 'space-around' }}>
-        <div style={{ display: 'flex', flexFlow: 'row', justifyContent: 'space-around' }}>
-          <button onClick={() => amount > 1 && setAmount(amount - 1)}>-</button>
-          <div>{amount}</div>
-          <button onClick={() => setAmount(amount + 1)}>+</button>
+        style={{
+          display: 'flex',
+          height: '50px',
+          flexFlow: 'row',
+          width: '80%',
+          justifyContent: 'space-around',
+        }}>
+        <div
+          style={{
+            display: 'flex',
+            flexFlow: 'row',
+            justifyContent: 'space-between',
+            width: '48%',
+          }}>
+          <AmountButton onClick={() => amount > 1 && setAmount(amount - 1)}>-</AmountButton>
+          <div style={{ alignSelf: 'center' }}>{amount}</div>
+          <AmountButton onClick={() => setAmount(amount + 1)}>+</AmountButton>
         </div>
-        <div>
-          <button onClick={()=>''}>
+        <div style={{ width: '48%', display: 'flex', justifyContent: 'flex-end' }}>
+          <AddButton onClick={() => ''}>
             Add{' '}
             {(amount * price).toLocaleString('pt-BR', {
               minimumFractionDigits: 2,
               style: 'currency',
               currency: 'BRL',
             })}
-          </button>
+          </AddButton>
         </div>
       </div>
     </Container>
   );
 };
+const Button = styled.button`
+  outline: none;
+  border: none;
+  font-size: calc(7px + 2vmin);
+`;
+const AddButton = styled(Button)`
+  width: 70%;
+  height: 100%;
+  background-color: green;
+  color: white;
+`;
+const AmountButton = styled(Button)`
+  width: 30%;
+  height: 100%;
+  background-color: grey;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -76,6 +104,7 @@ const Container = styled.div`
   flex-flow: column nowrap;
   width: 100%;
   height: fit-content;
+  font-size: calc(7px + 2vmin);
   & > div {
     padding: 30px;
   }
