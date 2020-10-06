@@ -19,36 +19,20 @@ const Map = ({ type, list }) => {
 
   if (type === 'category') {
     return (
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexFlow: 'row wrap',
-          alignContent: 'center',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
+      <>
         {list &&
           list.map(({ category, img }, index) => {
             return (
               <CategoryCard key={index} name={category} img={img} category={toLink(category)} />
             );
           })}
-      </div>
+      </>
     );
   }
 
   if (type === 'items') {
     return (
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexFlow: 'row wrap',
-          alignContent: 'center',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
+      <>
         {list &&
           list
             .filter(({ category }) => category.toLowerCase() === params.category)
@@ -63,7 +47,7 @@ const Map = ({ type, list }) => {
                 />
               );
             })}
-      </div>
+      </>
     );
   }
 
