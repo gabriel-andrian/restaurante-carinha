@@ -11,7 +11,6 @@ export const requestMenu = () => (dispatch) => {
     }).then((data) => {
       endpoint === 'categories' && dispatch(categoriesInfo(data.data));
       endpoint === 'products' && dispatch(productsInfo(data.data));
-      console.log(data.data);
     });
   };
 
