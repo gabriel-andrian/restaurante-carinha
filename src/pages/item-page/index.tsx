@@ -1,7 +1,8 @@
 import React from 'react';
+import { CardItem } from '../../components';
 
 const ItemPage = () => {
-  return <div></div>;
+  return <CardItem />;
 };
 
 export default ItemPage;
