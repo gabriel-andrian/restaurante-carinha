@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import CategoryCard from '../category-card';
 import CardToOrder from '../card-to-order';
 
-const toLink = (str) =>
+const toLink = (str: string) =>
   str
     .toLowerCase()
     .replace(' ', '-')
@@ -14,8 +14,19 @@ const toLink = (str) =>
     .replace(/[ÚÙÛŨ]+/gi, 'u')
     .replace(/[Ç]/, 'c');
 
-const Map = ({ type, list }) => {
-  const params = useParams();
+interface Props {
+  type: string;
+  list: Array<{
+    category: string;
+    img: string;
+    name: string;
+    description: string;
+    price: number | string;
+  }>;
+}
+
+const Map = ({ type, list }: Props) => {
+  const params: { category: string } = useParams();
 
   if (type === 'category') {
     return (
