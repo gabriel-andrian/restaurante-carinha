@@ -42,28 +42,95 @@ const UserRegForm = () => {
   return (
     <form onSubmit={handleSubmit(submitEmail)}>
       <div>
-        <label>Nome: </label>
-        <input onChange={(e) => setValue('name', e.target.value)} />
+        {errors.name && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.name.message}</h3>}
+        <input
+          style={{
+            maxWidth: '400px',
+            width: '80%',
+            lineHeight: '3em',
+            fontFamily: 'sans-serif',
+            margin: '1em 2em',
+            borderRadius: '5px',
+            border: '2px solid #f2f2f2',
+            outline: 'none',
+            paddingLeft: '10px',
+            fontSize: '20px'
+          }}
+          placeholder="Nome"
+          onChange={(e) => setValue('name', e.target.value)} />
       </div>
       <div>
-        <label>Email: </label>
-        <input onChange={(e) => setValue('email', e.target.value)} />
+        {errors.email && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.email.message}</h3>}
+        <input
+          style={{
+            maxWidth: '400px',
+            width: '80%',
+            lineHeight: '3em',
+            fontFamily: 'sans-serif',
+            margin: '1em 2em',
+            borderRadius: '5px',
+            border: '2px solid #f2f2f2',
+            outline: 'none',
+            paddingLeft: '10px',
+            fontSize: '20px'
+          }}
+          placeholder="E-mail"
+          onChange={(e) => setValue('email', e.target.value)} />
       </div>
       <div>
-        <label>Senha: </label>
-        <input onChange={(e) => setValue('password', e.target.value)} />
+        {errors.password && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.password.message}</h3>}
+        <input
+          style={{
+            maxWidth: '400px',
+            width: '80%',
+            lineHeight: '3em',
+            fontFamily: 'sans-serif',
+            margin: '1em 2em',
+            borderRadius: '5px',
+            border: '2px solid #f2f2f2',
+            outline: 'none',
+            paddingLeft: '10px',
+            fontSize: '20px'
+          }}
+          placeholder="Senha"
+          onChange={(e) => setValue('password', e.target.value)} />
       </div>
       <div>
-        <label>Confirmação de Senha: </label>
-        <input onChange={(e) => setValue('passwordConf', e.target.value)} />
+        {errors.passwordConf && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.passwordConf.message}</h3>}
+        <input
+          style={{
+            maxWidth: '400px',
+            width: '80%',
+            lineHeight: '3em',
+            fontFamily: 'sans-serif',
+            margin: '1em 2em',
+            borderRadius: '5px',
+            border: '2px solid #f2f2f2',
+            outline: 'none',
+            paddingLeft: '10px',
+            fontSize: '20px'
+          }}
+          placeholder="Confirmação de Senha"
+          onChange={(e) => setValue('passwordConf', e.target.value)} />
       </div>
-      <div>
-        <button type="submit">Cadastrar</button>
+      <div style={{
+        placeContent: 'center center',
+        display: 'flex',
+      }}>
+        <input
+          style={{
+            placeContent: 'end center',
+            height: '11vh',
+            maxHeight: '80px',
+            width: '46vw',
+            maxWidth: '200px',
+            background: '#26C000',
+            border: '1px solid #000',
+            borderRadius: '20px',
+            fontSize: '20px'
+          }}
+          type="submit" value="CADASTRAR" />
       </div>
-      {errors.name && <p style={{ color: 'red' }}>{errors.name.message}</p>}
-      {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
-      {errors.password && <p style={{ color: 'red' }}>{errors.password.message}</p>}
-      {errors.passwordConf && <p style={{ color: 'red' }}>{errors.passwordConf.message}</p>}
     </form>
   );
 };
