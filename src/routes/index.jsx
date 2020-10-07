@@ -15,7 +15,7 @@ const Routes = () => {
       <Route path="/register">
         <UserRegForm />
       </Route>
-      <Route path="/menu/:category/:item">
+      <Route path="/menu/:category/:id">
         <ItemPage />
       </Route>
       <Route path="/menu/:category">

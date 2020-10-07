@@ -64,7 +64,7 @@ export const Price = styled.div`
   width: 50%;
   height: fit-content;
   background: #f2b604;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 12px;
   color: #de2537;
   text-align: center;

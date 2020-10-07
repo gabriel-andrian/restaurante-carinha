@@ -1,25 +1,41 @@
 import React from 'react';
 import { Card } from '../styled-common';
 import { Content, CardImage, Wrapper, Title, Description, Price } from './styled';
+import { Link, useParams, useRouteMatch } from 'react-router-dom';
 
 interface Props {
-  title?: string;
+  title: string;
   description?: string;
   img: string;
-  price?: string | number;
+  price: string | number;
+  id: number;
 }
 
-const CardToOrder = ({ title, description, img, price }: Props) => {
+interface IUseRouteMatch {
+  url: string;
+}
+
+const CardToOrder = ({ title, description, img, price, id }: Props) => {
+  const { url }: IUseRouteMatch = useRouteMatch();
+
   return (
     <Card>
-      <Wrapper>
-        <CardImage image={img} />
-        <Content>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-          <Price>R$ {price}</Price>
-        </Content>
-      </Wrapper>
+      <Link to={`${url}/${id}`}>
+        <Wrapper>
+          <CardImage image={img} />
+          <Content>
+            <Title>{title}</Title>
+            <Description>{description}</Description>
+            <Price>
+              {price.toLocaleString('pt-BR', {
+                minimumFractionDigits: 2,
+                style: 'currency',
+                currency: 'BRL',
+              })}
+            </Price>
+          </Content>
+        </Wrapper>
+      </Link>
     </Card>
   );
 };
