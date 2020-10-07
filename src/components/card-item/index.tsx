@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { add_item_to_order } from '../../redux/actions/order';
 
 interface Props {
   title?: string;
@@ -36,6 +38,7 @@ const CardItem = ({
   const [amount, setAmount] = useState(1);
   const [note, setNote] = useState('');
   const handleClick = () => {};
+  const dispatch = useDispatch();
   console.log(note);
   return (
     <Container>
@@ -67,7 +70,7 @@ const CardItem = ({
           <AmountButton onClick={() => setAmount(amount + 1)}>+</AmountButton>
         </div>
         <div style={{ width: '48%', display: 'flex', justifyContent: 'flex-end' }}>
-          <AddButton onClick={() => ''}>
+          <AddButton onClick={() => dispatch(add_item_to_order(amount))}>
             Add{' '}
             {(amount * price).toLocaleString('pt-BR', {
               minimumFractionDigits: 2,
