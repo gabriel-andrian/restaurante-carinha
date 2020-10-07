@@ -22,6 +22,7 @@ interface Props {
     name: string;
     description: string;
     price: number | string;
+    id: number;
   }>;
 }
 
@@ -47,7 +48,7 @@ const Map = ({ type, list }: Props) => {
         {list &&
           list
             .filter(({ category }) => category.toLowerCase() === params.category)
-            .map(({ name, description, img, price }, index) => {
+            .map(({ name, description, img, price, id }, index) => {
               return (
                 <CardToOrder
                   key={index}
@@ -55,6 +56,7 @@ const Map = ({ type, list }: Props) => {
                   description={description}
                   img={img}
                   price={price}
+                  id={id}
                 />
               );
             })}

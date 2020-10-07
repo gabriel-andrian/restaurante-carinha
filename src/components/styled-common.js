@@ -12,6 +12,23 @@ export const Card = styled.div`
   @media (min-width: 450px) {
     width: 300px;
   }
+
+  & a {
+    text-decoration: none;
+
+    &:link {
+      color: inherit;
+    }
+    &:visited {
+      color: inherit;
+    }
+    &:hover {
+      color: inherit;
+    }
+    &:active {
+      color: inherit;
+    }
+  }
 `;
 
 export const ContainerPages = styled.div`
