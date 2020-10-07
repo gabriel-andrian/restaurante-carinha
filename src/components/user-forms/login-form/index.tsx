@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import { HiMenuAlt3 } from 'react-icons/hi';
 
 const UserLoginForm = () => {
   const { register, unregister, handleSubmit, setValue, errors } = useForm();
@@ -37,18 +38,66 @@ const UserLoginForm = () => {
   return (
     <form onSubmit={handleSubmit(submitEmail)}>
       <div>
-        <label>Usuário: </label>
-        <input onChange={(e) => setValue('email', e.target.value)} />
+        {
+        errors.email 
+        ? 
+        <h3 style={{ color: 'red', textAlign:'center' }}>{errors.email.message}</h3> 
+        : 
+        <h3 style={{textAlign:'center'}}>Usuário</h3>
+        }
+        <input style={{
+          maxWidth:'400px',
+          width: '80%',
+          lineHeight: '3em',
+          margin: '1em 2em',
+          borderRadius: '5px',
+          border:'2px solid #f2f2f2',
+          paddingLeft: '10px',
+          fontSize: '20px'
+        }} 
+        onChange={(e) => setValue('email', e.target.value)} />
       </div>
       <div>
-        <label>Senha: </label>
-        <input onChange={(e) => setValue('password', e.target.value)} />
+        {
+        errors.password 
+        ? 
+        <h3 style={{ color: 'red', textAlign:'center' }}>{errors.password.message}</h3> 
+        : 
+        <h3 style={{textAlign:'center'}}>Senha</h3>
+        }
+        <input 
+        style={{
+          maxWidth:'400px',
+          width: '80%',
+          lineHeight: '3em',
+          fontFamily: 'sans-serif',
+          margin: '1em 2em',
+          borderRadius: '5px',
+          border:'2px solid #f2f2f2',
+          outline: 'none',
+          paddingLeft: '10px',
+          fontSize: '20px'
+      }}
+        onChange={(e) => setValue('password', e.target.value)} type='password'/>
       </div>
-      <div>
-        <button type="submit">Logar</button>
+      <div style={{
+          placeContent: 'center center', 
+          display: 'flex',
+          }}>
+        <input 
+        style={{
+          placeContent: 'end center',
+          height:'11vh',
+          maxHeight: '80px',
+          width:'46vw',
+          maxWidth: '200px',
+          background:'#26C000',
+          border:'1px solid #000',
+          borderRadius:'20px',
+          fontSize: '20px'
+         }}
+        type="submit" value="LOGAR" />
       </div>
-      {errors.email && <p style={{ color: 'red' }}>{errors.email.message}</p>}
-      {errors.password && <p style={{ color: 'red' }}>{errors.password.message}</p>}
     </form>
   );
 };
