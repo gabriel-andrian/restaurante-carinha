@@ -8,20 +8,9 @@ import UserLoginForm from '../components/user-forms/login-form';
 import UserRegForm from '../components/user-forms/registration-form';
 
 const Routes = () => {
-  const location = useLocation();
-  const { category } = useParams();
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const categories = useSelector((state) => state.categories.categoriesData);
-  const products = useSelector((state) => state.products.productsData);
-  const items = useSelector((state) => state);
-
-  useEffect(() => {
-    dispatch(requestMenu());
-  }, []);
-
   return (
     <Switch>
+      <Route path='/card'><CardItem/></Route>
       <Route path="/product-registration">
         <ProductRegistration />
       </Route>

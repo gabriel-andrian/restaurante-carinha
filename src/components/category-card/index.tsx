@@ -13,14 +13,14 @@ interface CategoryProps {
 
 const CategoryCard = ({ name, img, onClick, category }: CategoryProps) => {
   return (
-    <Link to={`/menu/${category}`}>
-      <Card>
+    <Card>
+      <Link to={`/menu/${category}`}>
         <Container>
           <Image image={img} />
           <Title>{name}</Title>
         </Container>
-      </Card>
-    </Link>
+      </Link>
+    </Card>
   );
 };
 

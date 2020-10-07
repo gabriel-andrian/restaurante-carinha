@@ -13,3 +13,14 @@ export const Card = styled.div`
     width: 300px;
   }
 `;
+
+export const ContainerPages = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+`;
