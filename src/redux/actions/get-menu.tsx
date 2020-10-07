@@ -1,4 +1,3 @@
-import { ThunkAction } from 'redux-thunk';
 import axios from 'axios';
 
 export const GET_CATEGORIES = 'GET_CATEGORIES';
