@@ -1,9 +1,22 @@
 import axios from 'axios';
+
 export const GET_CATEGORIES = 'GET_CATEGORIES';
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 
-export const requestMenu = () => (dispatch) => {
-  const callAxios = (endpoint) => {
+export interface ICategoriesInfo {
+  type: typeof GET_CATEGORIES;
+  categoriesData: Array<Object>;
+}
+
+export interface IProductsInfo {
+  type: typeof GET_PRODUCTS;
+  productsData: Array<Object>;
+}
+
+export type MenuActions = ICategoriesInfo | IProductsInfo;
+
+export const requestMenu = () => (dispatch: (arg: MenuActions) => void) => {
+  const callAxios = (endpoint: string) => {
     axios({
       method: 'get',
       headers: { 'Content-Type': 'application/json' },
@@ -18,11 +31,11 @@ export const requestMenu = () => (dispatch) => {
   callAxios('products');
 };
 
-const categoriesInfo = (categoriesData) => ({
+const categoriesInfo = (categoriesData: Array<Object>): MenuActions => ({
   type: GET_CATEGORIES,
   categoriesData,
 });
-const productsInfo = (productsData) => ({
+const productsInfo = (productsData: Array<Object>): MenuActions => ({
   type: GET_PRODUCTS,
   productsData,
 });

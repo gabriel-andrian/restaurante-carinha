@@ -1,8 +1,8 @@
-import { ADD_ITEM, REMOVE_ITEM } from '../actions/order';
+import { ADD_ITEM, REMOVE_ITEM, OrderItems } from '../actions/order';
 
 const defaultState = { order: [] };
 
-const order_list = (state = defaultState, action) => {
+const order_list = (state = defaultState, action: OrderItems) => {
   switch (action.type) {
     case ADD_ITEM:
       return {

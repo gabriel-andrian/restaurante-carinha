@@ -6,7 +6,7 @@ interface Props {
   title?: string;
   description?: string;
   img: string;
-  price?: number;
+  price?: string | number;
 }
 
 const CardToOrder = ({ title, description, img, price }: Props) => {
