@@ -3,7 +3,7 @@ export const REMOVE_ITEM = 'REMOVE_ITEM';
 
 export interface IAdd_item_to_order {
   type: typeof ADD_ITEM;
-  newItem: number;
+  newItem: {amount:number, itemId:number, note:string};
 }
 
 export interface IRemove_item_from_order {
@@ -11,9 +11,10 @@ export interface IRemove_item_from_order {
   item: number;
 }
 
+
 export type OrderItems = IAdd_item_to_order | IRemove_item_from_order;
 
-export const add_item_to_order = (newItem: number): OrderItems => ({
+export const add_item_to_order = (newItem: {amount:number, itemId:number, note:string}): OrderItems => ({
   type: ADD_ITEM,
   newItem,
 });
