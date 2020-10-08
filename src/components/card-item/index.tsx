@@ -39,7 +39,6 @@ const CardItem = ({
   const [note, setNote] = useState('');
   const handleClick = () => {};
   const dispatch = useDispatch();
-  console.log(note);
   return (
     <Container>
       <img style={{ width: '100%' }} src={image} />
