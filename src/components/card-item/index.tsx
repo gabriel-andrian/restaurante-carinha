@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { add_item_to_order } from '../../redux/actions/order';
+import {useParams} from 'react-router-dom';
 
 interface Props {
   title?: string;
@@ -9,39 +10,31 @@ interface Props {
   price?: number;
   image?: string;
 }
+interface IUseParams {
+  itemId: string;
+}
 
 const CardItem = ({
   title = 'Titulo',
-  description = `Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-  Modi expedita provident nemo quae vel aut similique!
-  Laudantium illum autem labore quia eaque iure maxime deserunt qui itaque! 
-  Possimus, aut impedit?
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-  Modi expedita provident nemo quae vel aut similique! 
-  Laudantium illum autem labore quia eaque iure maxime deserunt qui itaque! 
-  Possimus, aut impedit?
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-  Modi expedita provident nemo quae vel aut similique! 
-  Laudantium illum autem labore quia eaque iure maxime deserunt qui itaque! 
-  Possimus, aut impedit?
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-  Modi expedita provident nemo quae vel aut similique! 
-  Laudantium illum autem labore quia eaque iure maxime deserunt qui itaque! 
-  Possimus, aut impedit?
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-  Modi expedita provident nemo quae vel aut similique! 
-  Laudantium illum autem labore quia eaque iure maxime deserunt qui itaque! 
-  Possimus, aut impedit?`,
+  description = `description`,
   price = 109.2,
   image = 'https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291041_EP5L_c.jpg',
 }: Props) => {
+
   const [amount, setAmount] = useState(1);
   const [note, setNote] = useState('');
-  const handleClick = () => {};
+  const{ itemId }: IUseParams = useParams();
+
+  const handleClick = () => {
+    console.log({amount,itemId,note})
+    dispatch(add_item_to_order({amount,itemId:parseInt(itemId),note}))
+  };
+
   const dispatch = useDispatch();
   return (
     <Container>
       <img style={{ width: '100%' }} src={image} />
+      
       <div>
         <h3>{title}</h3>
         <div style={{ padding: '15px' }}>{description}</div>
@@ -69,7 +62,7 @@ const CardItem = ({
           <AmountButton onClick={() => setAmount(amount + 1)}>+</AmountButton>
         </div>
         <div style={{ width: '48%', display: 'flex', justifyContent: 'flex-end' }}>
-          <AddButton onClick={() => dispatch(add_item_to_order(amount))}>
+          <AddButton onClick={() => handleClick()}>
             Add{' '}
             {(amount * price).toLocaleString('pt-BR', {
               minimumFractionDigits: 2,
