@@ -21,12 +21,6 @@ export const ContainerButtom = styled.div`
   justify-content: center;
 `;
 
-export const TotalPrice = styled.div`
-  width: 95%;
-  text-align: right;
-  margin: 20px 0;
-`;
-
 export const Buttom = styled.button`
   width: 100%;
   height: calc(40px + 4vmin);

@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { IReducer } from '../../redux/reducers';
 import { useHistory } from 'react-router-dom';
-import { Map } from '../../components';
-import { Container, ContainerEmpty, ContainerButtom, TotalPrice, Buttom } from './styled';
+import { Map, TotalPrice } from '../../components';
+import { Container, ContainerEmpty, ContainerButtom, Buttom } from './styled';
 import { Empty } from 'antd';
 
 const OrderPage = () => {
@@ -24,7 +24,7 @@ const OrderPage = () => {
       <ContainerButtom>
         <button onClick={() => history.push('/menu')}>Adicionar novo item</button>
       </ContainerButtom>
-      <TotalPrice>Total: 230,00</TotalPrice>
+      <TotalPrice />
       <Buttom onClick={handleSubmit}>Finalizar Pedido</Buttom>
     </Container>
   );

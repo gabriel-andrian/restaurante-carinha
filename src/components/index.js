@@ -10,6 +10,7 @@ import UserRegForm from './user-forms/registration-form/index.tsx';
 import CardItem from './card-item';
 import CardOrder from './card-order';
 import Map from './map';
+import TotalPrice from './total-price-order';
 
 export {
   TopMenu,
@@ -24,4 +25,5 @@ export {
   CardItem,
   CardOrder,
   Map,
+  TotalPrice,
 };
