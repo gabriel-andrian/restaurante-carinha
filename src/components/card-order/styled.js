@@ -18,10 +18,25 @@ export const Title = styled.div`
   font-weight: 400;
 `;
 export const Description = styled.div`
-  margin: 10px 5px;
+  margin: 5px 5px 0px 5px;
   height: fit-content;
-  min-height: 30px;
+  min-height: 14px;
   text-align: left;
   font-size: 14px;
   color: #a0a0a0;
 `;
+
+export const IconDiv = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+`;
+
+export const styledIcon = { color: 'red' };
+
+export const styledGeneryCard = {
+  width: '95%',
+  height: 'fit-content',
+  minHeight: '80px',
+  paddingRight: '1px',
+  paddingBottom: '2px',
+};

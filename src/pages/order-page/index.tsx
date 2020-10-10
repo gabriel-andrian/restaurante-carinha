@@ -1,28 +1,26 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { IAdd_item_to_order } from '../../redux/actions/order';
 import { IReducer } from '../../redux/reducers';
 import { useHistory } from 'react-router-dom';
-import { CardOrder } from '../../components';
-import { Container, ContainerButtom, TotalPrice, Buttom } from './styled';
-
-interface IOrder {
-  amount: number;
-  note: string;
-  itemId: number;
-}
+import { Map } from '../../components';
+import { Container, ContainerEmpty, ContainerButtom, TotalPrice, Buttom } from './styled';
+import { Empty } from 'antd';
 
 const OrderPage = () => {
   const history = useHistory();
-  const orders = useSelector((state: IReducer) => state.order_list);
-  console.log(orders);
+  const orders: any[] = useSelector((state: IReducer) => state.order_list);
 
   const handleSubmit = () => {
     console.log('Pedido enviado com sucesso!');
+    // dispatch no order com o default e dispatch para a API
   };
-  return (
+  return orders.length === 0 ? (
+    <ContainerEmpty>
+      <Empty />
+    </ContainerEmpty>
+  ) : (
     <Container>
-      <CardOrder />
+      <Map type={'orders'} list={orders} />
       <ContainerButtom>
         <button onClick={() => history.push('/menu')}>Adicionar novo item</button>
       </ContainerButtom>

@@ -1,19 +1,13 @@
-import { ADD_ITEM, REMOVE_ITEM, OrderItems } from '../actions/order';
+import { ADD_ITEM, REMOVE_ITEM, OrderItems, Order } from '../actions/order';
 
-const defaultState = { order: [] };
+const defaultState: Order[] = [];
 
 const order_list = (state = defaultState, action: OrderItems) => {
   switch (action.type) {
     case ADD_ITEM:
-      return {
-        ...state,
-        order: [...state.order, action.newItem],
-      };
+      return [...state, ...[action.newItem]];
     case REMOVE_ITEM:
-      return {
-        ...state,
-        order: state.order.filter((item) => item !== action.item),
-      };
+      return state.filter((item) => item.itemId !== action.item);
     default:
       return state;
   }

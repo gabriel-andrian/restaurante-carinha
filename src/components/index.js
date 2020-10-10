@@ -9,6 +9,7 @@ import UserLoginForm from './user-forms/login-form/index.tsx';
 import UserRegForm from './user-forms/registration-form/index.tsx';
 import CardItem from './card-item';
 import CardOrder from './card-order';
+import Map from './map';
 
 export {
   TopMenu,
@@ -22,4 +23,5 @@ export {
   CategoryCard,
   CardItem,
   CardOrder,
+  Map,
 };

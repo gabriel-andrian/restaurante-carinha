@@ -1,15 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Order, remove_item_from_order } from '../../redux/actions/order';
 import { Card } from '../styled-common';
-import { Container, Title, Description } from './styled';
+import { Container, Title, Description, IconDiv, styledIcon, styledGeneryCard } from './styled';
+import { IReducer } from '../../redux/reducers';
+import { RiDeleteBin2Line } from 'react-icons/ri';
 
-const CardOrder = () => {
+const CardOrder = ({ amount, itemId, note }: Order) => {
+  const { name, price }: any = useSelector(
+    (state: IReducer) => state.products.productsData.filter(({ id }: any) => id === itemId)[0]
+  );
+  const dispatch = useDispatch();
+  const xPrice = (amount * price).toLocaleString('pt-BR', {
+    minimumFractionDigits: 2,
+    style: 'currency',
+    currency: 'BRL',
+  });
+
+  const handleClick = () => {
+    dispatch(remove_item_from_order(itemId));
+  };
+
   return (
-    <Card style={{ width: '95%', height: 'fit-content', minHeight: '50px' }}>
+    <Card style={styledGeneryCard}>
       <Container>
-        <Title> 1 x Sabão de mesa</Title>
-        <Title>R$ 100,00</Title>
+        <Title>
+          {amount} x {name}
+        </Title>
+        <Title>{xPrice}</Title>
       </Container>
-      <Description>Observações: Tirar a cebola e não sei mais o que rsrsrs</Description>
+      <Description>{note}</Description>
+      <IconDiv>
+        <RiDeleteBin2Line style={styledIcon} size={'1.8em'} onClick={handleClick} />
+      </IconDiv>
     </Card>
   );
 };
