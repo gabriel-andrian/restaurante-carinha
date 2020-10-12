@@ -6,7 +6,7 @@ const UserRegForm = () => {
   const { register, unregister, handleSubmit, setValue, errors, watch } = useForm();
 
   const submitEmail = (data: object) => {
-    const url = `http://localhost:3001`;
+    const url = `https://json-server-order-here.herokuapp.com/`;
     const api = axios.create({
       baseURL: url,
       headers: { 'Content-Type': 'application/json' },
@@ -93,6 +93,7 @@ const UserRegForm = () => {
             fontSize: '20px'
           }}
           placeholder="Senha"
+          type="password"
           onChange={(e) => setValue('password', e.target.value)} />
       </div>
       <div>
@@ -111,6 +112,7 @@ const UserRegForm = () => {
             fontSize: '20px'
           }}
           placeholder="Confirmação de Senha"
+          type="password"
           onChange={(e) => setValue('passwordConf', e.target.value)} />
       </div>
       <div style={{
