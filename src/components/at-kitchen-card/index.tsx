@@ -11,25 +11,24 @@ import {
   OrderNotes,
 } from './styled';
 
-const AtKitchenCard = () => {
+interface Props {
+  table: string;
+  quantity: number;
+  itemName: string;
+  note: string;
+}
+
+const AtKitchenCard = ({ table, quantity, itemName, note }: Props) => {
   return (
     <Wrapper>
-      <Title>Mesa X</Title>
+      <Title>{table}</Title>
       <OrderContent>
         <QuantityTitle>Qtd.</QuantityTitle>
         <ItemTitle>Item</ItemTitle>
-        <Quantity>2</Quantity>
-        <Item>Porção de frango frito</Item>
+        <Quantity>{quantity}</Quantity>
+        <Item>{itemName}</Item>
         <OrderNotesTitle>Obs.:</OrderNotesTitle>
-        <OrderNotes>Vamo dale</OrderNotes>
-        <Quantity>2</Quantity>
-        <Item>Porção de polenta frita</Item>
-        <OrderNotesTitle>Obs.:</OrderNotesTitle>
-        <OrderNotes>Com queijo</OrderNotes>
-        <Quantity>5</Quantity>
-        <Item>Espetinho de coração de galinha</Item>
-        <OrderNotesTitle>Obs.:</OrderNotesTitle>
-        <OrderNotes>Vamo dale</OrderNotes>
+        {note && <OrderNotes>{note}</OrderNotes>}
       </OrderContent>
     </Wrapper>
   );
