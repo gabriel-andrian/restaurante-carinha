@@ -3,11 +3,12 @@ import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import {ButtonStyle,InputStyle,ContainerForm} from '../styleds';
 import { message } from 'antd';
-
+import { useHistory } from 'react-router-dom';
 
 const UserRegForm = () => {
   const { register, unregister, handleSubmit, setValue, errors, watch } = useForm();
-
+  let history = useHistory();
+  
   const submitEmail = (data: object) => {
     //e.preventDefault()
     const url = `https://json-server-order-here.herokuapp.com`;
@@ -17,6 +18,7 @@ const UserRegForm = () => {
     });
     api.post('register', data).then(() => {
       message.success('Cadastro feito com sucesso!');
+      history.push("/");
     })
     .catch(
       message.error("Email já existente!", 3)
@@ -60,13 +62,17 @@ const UserRegForm = () => {
         <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.email.message}</h3>
       )}
 
-      <InputStyle placeholder="Senha" onChange={(e) => setValue('password', e.target.value)} />
+      <InputStyle 
+        placeholder="Senha" 
+        type='password' 
+        onChange={(e) => setValue('password', e.target.value)} />
       {errors.password && (
         <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.password.message}</h3>
       )}
 
       <InputStyle
         placeholder="Confirmação de Senha"
+        type='password'
         onChange={(e) => setValue('passwordConf', e.target.value)}
       />
       {errors.passwordConf && (

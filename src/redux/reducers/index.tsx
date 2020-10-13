@@ -6,6 +6,8 @@ import { order_list } from './order';
 
 import { IProductsInfo, ICategoriesInfo } from '../actions/get-menu';
 
+import session from './session';
+
 export type RootOrderType = ReturnType<typeof order_list>;
 
 export interface IReducer {
@@ -14,4 +16,4 @@ export interface IReducer {
   order_list: RootOrderType;
 }
 
-export default combineReducers({ categories, products, order_list });
+export default combineReducers({ categories, products, order_list, session });
