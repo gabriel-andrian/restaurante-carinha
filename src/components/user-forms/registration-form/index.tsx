@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import styled from 'styled-components';
+import {ButtonStyle,InputStyle,ContainerForm} from '../styleds';
 import { message } from 'antd';
+
 
 const UserRegForm = () => {
   const { register, unregister, handleSubmit, setValue, errors, watch } = useForm();
@@ -49,14 +50,7 @@ const UserRegForm = () => {
   }, [register, unregister]);
 
   return (
-    <form
-      style={{
-        display: 'flex',
-        height: '100%',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
+    <ContainerForm
       onSubmit={handleSubmit(submitEmail)}>
       <InputStyle placeholder="Nome" onChange={(e) => setValue('name', e.target.value)} />
       {errors.name && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.name.message}</h3>}
@@ -86,42 +80,9 @@ const UserRegForm = () => {
         }}>
         <ButtonStyle type="submit" value="CADASTRAR" />
       </div>
-    </form>
+    </ContainerForm>
   );
 };
-const ButtonStyle = styled.input`
-  place-content: end center;
-  height: 11vh;
-  max-height: 80px;
-  width: 46vw;
-  max-width: 200px;
-  background: #4CAF50;
-  border:none;
-  outline:none;
-  border-radius: 20px;
-  font-size: 20px;
-  box-shadow: 0 9px #999;
-  color:white;
-&:hover{
-  background-color: #3e8e41
-}
-&:active{
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-`;
-const InputStyle = styled.input`
-  width: 80%;
-  max-width: 400px;
-  line-height: 3em;
-  font-family: sans-serif;
-  margin: 1em 2em;
-  border-radius: 5px;
-  border: 2px solid #f2f2f2;
-  outline: none;
-  padding-left: 10px;
-  font-size: 20px;
-`;
+
 
 export default UserRegForm;
