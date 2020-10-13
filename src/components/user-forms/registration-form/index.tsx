@@ -17,18 +17,18 @@ const UserRegForm = () => {
   };
 
   useEffect(() => {
-    register('name', { required: 'Nome não pode estar em branco ' });
+    register('name', { required: 'Nome não pode estar em branco *' });
     register('email', {
-      required: 'email não pode estar em branco',
+      required: 'Email não pode estar em branco *',
       pattern: {
         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-        message: 'email inválido',
+        message: 'Email inválido *',
       },
     });
-    register('password', { required: 'senha não pode estar em branco' });
+    register('password', { required: 'Senha não pode estar em branco *',minLength:{value:8 , message:'Senha deve ter ao menos 8 caracteres *'} });
     register('passwordConf', {
-      required: 'confirmação de senha não pode estar em branco',
-      validate: (value) => value === watch('password') || 'Confirmação de senha difere',
+      required: 'Confirmação de senha não pode estar em branco *',
+      validate: (value) => value === watch('password') || 'Confirmação de senha difere *',
     });
 
     return () => {
@@ -42,7 +42,6 @@ const UserRegForm = () => {
   return (
     <form onSubmit={handleSubmit(submitEmail)}>
       <div>
-        {errors.name && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.name.message}</h3>}
         <input
           style={{
             maxWidth: '400px',
@@ -58,9 +57,9 @@ const UserRegForm = () => {
           }}
           placeholder="Nome"
           onChange={(e) => setValue('name', e.target.value)} />
+          {errors.name && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.name.message}</h3>}
       </div>
       <div>
-        {errors.email && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.email.message}</h3>}
         <input
           style={{
             maxWidth: '400px',
@@ -76,9 +75,9 @@ const UserRegForm = () => {
           }}
           placeholder="E-mail"
           onChange={(e) => setValue('email', e.target.value)} />
+          {errors.email && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.email.message}</h3>}
       </div>
       <div>
-        {errors.password && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.password.message}</h3>}
         <input
           style={{
             maxWidth: '400px',
@@ -94,9 +93,9 @@ const UserRegForm = () => {
           }}
           placeholder="Senha"
           onChange={(e) => setValue('password', e.target.value)} />
+          {errors.password && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.password.message}</h3>}
       </div>
       <div>
-        {errors.passwordConf && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.passwordConf.message}</h3>}
         <input
           style={{
             maxWidth: '400px',
@@ -112,6 +111,7 @@ const UserRegForm = () => {
           }}
           placeholder="Confirmação de Senha"
           onChange={(e) => setValue('passwordConf', e.target.value)} />
+          {errors.passwordConf && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.passwordConf.message}</h3>}
       </div>
       <div style={{
         placeContent: 'center center',
