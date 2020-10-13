@@ -1,36 +1,20 @@
 import React from 'react';
-import {
-  Wrapper,
-  Title,
-  OrderContent,
-  QuantityTitle,
-  Quantity,
-  ItemTitle,
-  Item,
-  OrderNotesTitle,
-  OrderNotes,
-} from './styled';
+import { Quantity, Item, OrderNotesTitle, OrderNotes } from './styled';
 
-interface Props {
-  table: string;
-  quantity: number;
-  itemName: string;
-  note: string;
+export interface IKitchenCardProps {
+  amount: number;
+  name: string;
+  note?: string;
 }
 
-const AtKitchenCard = ({ table, quantity, itemName, note }: Props) => {
+const AtKitchenCard = ({ amount, name, note }: IKitchenCardProps) => {
   return (
-    <Wrapper>
-      <Title>{table}</Title>
-      <OrderContent>
-        <QuantityTitle>Qtd.</QuantityTitle>
-        <ItemTitle>Item</ItemTitle>
-        <Quantity>{quantity}</Quantity>
-        <Item>{itemName}</Item>
-        <OrderNotesTitle>Obs.:</OrderNotesTitle>
-        {note && <OrderNotes>{note}</OrderNotes>}
-      </OrderContent>
-    </Wrapper>
+    <>
+      <Quantity>{amount}</Quantity>
+      <Item>{name}</Item>
+      <OrderNotesTitle>Obs.:</OrderNotesTitle>
+      {note ? <OrderNotes>{note}</OrderNotes> : <OrderNotes> - </OrderNotes>}
+    </>
   );
 };
 
