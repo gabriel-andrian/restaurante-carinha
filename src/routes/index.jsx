@@ -31,7 +31,9 @@ const Routes = () => {
         <OrderPage />
       </Route>
       <Route path="/history">History</Route>
-      <Route path="/" />
+      <Route path="/">
+        <UserLoginForm />
+      </Route>
     </Switch>
   );
 };
