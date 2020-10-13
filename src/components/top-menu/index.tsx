@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ContainerTopMenu, LogoStyled } from './styled';
 import { Drawer } from '../index';
 import { HiOutlineMenu } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 // O componente abaixo foi criado para teste, necessita ser ou refeito, ou adaptado para corresponder ao protótipo do figma;
 
@@ -9,7 +10,18 @@ const TopMenu = () => {
   const [drawerVisible, setVisibleDrawer] = useState(false);
   return (
     <ContainerTopMenu>
-      <Drawer visible={drawerVisible} setVisibleDrawer={setVisibleDrawer} />
+      <Drawer
+        actions={[
+          <Link to="/register" onClick={() => setVisibleDrawer(false)}>
+            Cadastro
+          </Link>,
+          <Link to="/login" onClick={() => setVisibleDrawer(false)}>
+            Login
+          </Link>,
+        ]}
+        visible={drawerVisible}
+        setVisibleDrawer={setVisibleDrawer}
+      />
       <h1>Bienvenue!</h1>
       <button
         style={{

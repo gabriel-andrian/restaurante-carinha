@@ -24,6 +24,7 @@ const UserLoginForm = () => {
       console.log(res.data.accessToken);
       localStorage.setItem("token", res.data.accessToken);
       dispatch(login(res.data.accessToken, res.data.user, res.data.table));
+      history.push("/menu");
     });
   };
 
@@ -70,7 +71,7 @@ const UserLoginForm = () => {
               ?
               <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.email.message}</h3>
               :
-              <h3 style={{ textAlign: 'center' }}>Usuário</h3>
+              <h3 style={{ textAlign: 'center' }}>E-mail Cadastrado</h3>
           }
           <input style={{
             maxWidth: '400px',
