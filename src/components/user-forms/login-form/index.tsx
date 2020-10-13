@@ -23,7 +23,7 @@ const UserLoginForm = () => {
       alert('logado com sucesso');
       console.log(res.data.accessToken);
       localStorage.setItem("token", res.data.accessToken);
-      dispatch(login(res.data.accessToken, res.data.user));
+      dispatch(login(res.data.accessToken, res.data.user, res.data.table));
     });
   };
 
