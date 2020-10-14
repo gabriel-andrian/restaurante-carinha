@@ -21,8 +21,8 @@ export interface Order {
   amount: number;
   itemId: number;
   note: string;
-  name: string;
-  price: number;
+  name?: string;
+  price?: number;
   key_id: number;
 }
 
