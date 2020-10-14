@@ -1,4 +1,4 @@
-import { ADD_ITEM, REMOVE_ITEM, OrderItems, Order } from '../actions/order';
+import { ADD_ITEM, REMOVE_ITEM, OrderItems, Order, CLEAN_ORDERS } from '../actions/order';
 
 const defaultState: Order[] = [];
 
@@ -8,6 +8,8 @@ const order_list = (state = defaultState, action: OrderItems) => {
       return [...state, ...[action.newItem]];
     case REMOVE_ITEM:
       return state.filter((item) => item.itemId !== action.item);
+    case CLEAN_ORDERS:
+      return defaultState;
     default:
       return state;
   }
