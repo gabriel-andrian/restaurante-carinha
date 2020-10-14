@@ -20,7 +20,7 @@ const OrderPage = () => {
       orders: orders,
     };
     const api = axios.create({
-      baseURL: `http://localhost:3001/`,
+      baseURL: `https://json-server-order-here.herokuapp.com/`,
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${session.token}`,
