@@ -1,7 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ProductRegistration, UserLoginForm, UserRegForm } from '../components';
-import { CategoryPage, SubCategoryPage, ItemPage, OrderPage, LoginPage } from '../pages';
+import {
+  CategoryPage,
+  SubCategoryPage,
+  ItemPage,
+  OrderPage,
+  LoginPage,
+  KitchenPage,
+} from '../pages';
 
 const Routes = () => {
   return (

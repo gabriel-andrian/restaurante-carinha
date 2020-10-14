@@ -5,7 +5,7 @@ const defaultState: any[] = [];
 const history = (state = defaultState, action: actionType) => {
   switch (action.type) {
     case ADD_FINISHED_ORDER:
-      return [...state, ...[action.newFinishedOrder]];
+      return [...state, ...action.newFinishedOrder];
     case CLEAN_HISTORY:
       return defaultState;
     default:
