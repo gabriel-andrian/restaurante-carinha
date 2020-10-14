@@ -11,6 +11,8 @@ import CardItem from './card-item';
 import CardOrder from './card-order';
 import Map from './map';
 import TotalPrice from './total-price-order';
+import AtKitchenCard from './at-kitchen-card';
+import ListToKitchen from './list-to-kitchen';
 
 export {
   TopMenu,
@@ -26,4 +28,6 @@ export {
   CardOrder,
   Map,
   TotalPrice,
+  AtKitchenCard,
+  ListToKitchen,
 };

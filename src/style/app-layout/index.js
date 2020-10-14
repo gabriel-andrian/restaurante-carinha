@@ -29,7 +29,7 @@ export const Content = styled.div`
   margin: 8vh 0 100px 0;
   height: 150vh;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   align-content: flex-start;
   align-items: flex-start;

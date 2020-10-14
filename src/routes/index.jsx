@@ -6,6 +6,9 @@ import { CategoryPage, SubCategoryPage, ItemPage, OrderPage, LoginPage } from '.
 const Routes = () => {
   return (
     <Switch>
+      <Route path="/kitchen">
+        <KitchenPage />
+      </Route>
       <Route path="/product-registration">
         <ProductRegistration />
       </Route>
