@@ -38,7 +38,7 @@ export const requestSession = (dataLogin: IdataLogin) => (dispatch: (arg: userSe
         baseURL: `http://localhost:3001/`,
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token.accessToken}`,
         },
       });
       axiosPath.patch(`/tables/${dataLogin.table}`, { avaliable: false });
