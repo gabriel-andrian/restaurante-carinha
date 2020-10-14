@@ -9,7 +9,8 @@ export interface IAdd_item_to_order {
 
 export interface IRemove_item_from_order {
   type: typeof REMOVE_ITEM;
-  item: number;
+  item?: number;
+  key_id: number;
 }
 
 export interface IClean_orders {
@@ -20,6 +21,7 @@ export interface Order {
   amount: number;
   itemId: number;
   note: string;
+  key_id: number;
 }
 
 export type OrderItems = IAdd_item_to_order | IRemove_item_from_order | IClean_orders;
@@ -33,9 +35,9 @@ export const add_item_to_order = (newItem: {
   newItem,
 });
 
-export const remove_item_from_order = (item: number): IRemove_item_from_order => ({
+export const remove_item_from_order = (key_id: number): IRemove_item_from_order => ({
   type: REMOVE_ITEM,
-  item,
+  key_id,
 });
 
 export const clean_orders = (): IClean_orders => ({

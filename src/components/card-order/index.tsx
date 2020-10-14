@@ -6,7 +6,7 @@ import { Container, Title, Description, IconDiv, styledIcon, styledGeneryCard } 
 import { IReducer } from '../../redux/reducers';
 import { RiDeleteBin2Line } from 'react-icons/ri';
 
-const CardOrder = ({ amount, itemId, note }: Order) => {
+const CardOrder = ({ amount, itemId, note, key_id }: Order) => {
   const { name, price }: any = useSelector(
     (state: IReducer) => state.products.productsData.filter(({ id }: any) => id === itemId)[0]
   );
@@ -18,7 +18,7 @@ const CardOrder = ({ amount, itemId, note }: Order) => {
   });
 
   const handleClick = () => {
-    dispatch(remove_item_from_order(itemId));
+    dispatch(remove_item_from_order(key_id));
   };
 
   return (
