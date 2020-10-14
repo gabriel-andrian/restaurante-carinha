@@ -3,15 +3,15 @@ import { Quantity, Item, OrderNotesTitle, OrderNotes } from './styled';
 
 export interface IKitchenCardProps {
   amount: number;
-  name: string;
+  itemId: number;
   note?: string;
 }
 
-const AtKitchenCard = ({ amount, name, note }: IKitchenCardProps) => {
+const AtKitchenCard = ({ amount, itemId, note }: IKitchenCardProps) => {
   return (
     <>
       <Quantity>{amount}</Quantity>
-      <Item>{name}</Item>
+      <Item>{itemId}</Item>
       <OrderNotesTitle>Obs.:</OrderNotesTitle>
       {note ? <OrderNotes>{note}</OrderNotes> : <OrderNotes> - </OrderNotes>}
     </>
