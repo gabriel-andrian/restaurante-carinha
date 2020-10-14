@@ -15,8 +15,8 @@ const ListToKitchen = ({ table, list }: IListToKitchenProps) => {
       <OrderContent>
         <QuantityTitle>Qtd.</QuantityTitle>
         <ItemTitle>Item</ItemTitle>
-        {list.map(({ amount, name, note }) => {
-          return <AtKitchenCard amount={amount} name={name} note={note} />;
+        {list.map(({ amount, itemId, note }, key) => {
+          return <AtKitchenCard amount={amount} itemId={itemId} note={note} key={key} />;
         })}
       </OrderContent>
     </Wrapper>

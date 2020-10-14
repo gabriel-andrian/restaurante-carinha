@@ -5,188 +5,31 @@ import { ListToKitchen } from '../../components';
 
 const kitchen = [
   {
-    table: 2,
+    table: 10,
     orders: [
-      {
-        amount: 3,
-        name: 'Coca',
-        note: 'com gelo',
-      },
       {
         amount: 1,
-        name: 'carne',
-        note: '',
+        itemId: 31,
+        note: 'sem cebola',
       },
-    ],
-    id: 2,
-  },
-  {
-    table: 5,
-    orders: [
       {
         amount: 2,
-        name: 'Coca',
-        note: 'limão no copo',
+        itemId: 21,
+        note: 'com limão e gelo',
       },
-      {
-        amount: 1,
-        name: 'porção de fritas',
-        note: 'extra de bacon',
-      },
-    ],
-    id: 2,
-  },
-  {
-    table: 15,
-    orders: [
-      {
-        amount: 8,
-        name: 'Hambúrguer do futuro',
-        note: 'quero no presente',
-      },
-      {
-        amount: 1,
-        name: 'Buffalo Wings',
-        note: 'não tão apimentada',
-      },
-      {
-        amount: 5,
-        name: 'Coca',
-        note: 'limão em 3 copos',
-      },
-    ],
-    id: 2,
-  },
-  {
-    table: 2,
-    orders: [
-      {
-        amount: 3,
-        name: 'Coca',
-        note: 'com gelo',
-      },
-      {
-        amount: 1,
-        name: 'carne',
-        note: '',
-      },
-    ],
-    id: 2,
-  },
-  {
-    table: 5,
-    orders: [
       {
         amount: 2,
-        name: 'Coca',
-        note: 'limão no copo',
-      },
-      {
-        amount: 1,
-        name: 'porção de fritas',
-        note: 'extra de bacon',
-      },
-    ],
-    id: 2,
-  },
-  {
-    table: 15,
-    orders: [
-      {
-        amount: 8,
-        name: 'Hambúrguer do futuro',
-        note: 'quero no presente',
-      },
-      {
-        amount: 1,
-        name: 'Buffalo Wings',
-        note: 'não tão apimentada',
-      },
-      {
-        amount: 5,
-        name: 'Coca',
-        note: 'limão em 3 copos',
-      },
-    ],
-    id: 2,
-  },
-  {
-    table: 2,
-    orders: [
-      {
-        amount: 3,
-        name: 'Coca',
-        note: 'com gelo',
-      },
-      {
-        amount: 1,
-        name: 'carne',
-        note: '',
-      },
-      {
-        amount: 3,
-        name: 'Coca',
-        note: 'com gelo',
-      },
-      {
-        amount: 1,
-        name: 'carne',
-        note: '',
-      },
-      {
-        amount: 3,
-        name: 'Coca',
-        note: 'com gelo',
-      },
-      {
-        amount: 1,
-        name: 'carne',
+        itemId: 19,
         note: '',
       },
     ],
-    id: 2,
-  },
-  {
-    table: 5,
-    orders: [
-      {
-        amount: 2,
-        name: 'Coca',
-        note: 'limão no copo',
-      },
-      {
-        amount: 1,
-        name: 'porção de fritas',
-        note: 'extra de bacon',
-      },
-    ],
-    id: 2,
-  },
-  {
-    table: 15,
-    orders: [
-      {
-        amount: 8,
-        name: 'Hambúrguer do futuro',
-        note: 'quero no presente',
-      },
-      {
-        amount: 1,
-        name: 'Buffalo Wings',
-        note: 'não tão apimentada',
-      },
-      {
-        amount: 5,
-        name: 'Coca',
-        note: 'limão em 3 copos',
-      },
-    ],
-    id: 2,
   },
 ];
 
 const KitchenPage = () => {
-  return kitchen.map(({ table, orders }) => <ListToKitchen table={table} list={orders} />);
+  return kitchen.map(({ table, orders }, key) => (
+    <ListToKitchen table={table} list={orders} key={key} />
+  ));
 };
 
 export default KitchenPage;
