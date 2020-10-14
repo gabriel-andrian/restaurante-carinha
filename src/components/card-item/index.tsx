@@ -45,9 +45,9 @@ const CardItem = ({
       <div
         style={{
           display: 'flex',
-          height: '50px',
+          height: '100%',
           flexFlow: 'row',
-          width: '80%',
+          width: '90%',
           justifyContent: 'space-around',
         }}>
         <div
@@ -81,15 +81,32 @@ const Button = styled.button`
   font-size: calc(7px + 2vmin);
 `;
 const AddButton = styled(Button)`
-  width: 70%;
+  padding:5px;
+  width: 90%;
   height: 100%;
-  background-color: green;
+  background-color:  #af4c51;
   color: white;
+  box-shadow: 0 6px #999;
+  border-radius:10px;
+  &:hover {
+    background-color: #8a3b3f;
+  }
+  &:active {
+    background-color: #8a3b3f;
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+  }
 `;
 const AmountButton = styled(Button)`
   width: 30%;
   height: 100%;
-  background-color: grey;
+  background-color: #b6b6b6;
+  box-shadow: 0 6px #999;
+  border-radius:10px;
+  &:active {
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+  }
 `;
 
 const Container = styled.div`
