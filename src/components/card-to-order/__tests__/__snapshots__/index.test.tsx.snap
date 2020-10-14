@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`card-to-order renders 1`] = `
+<div
+  className="sc-bdnylx ERzDN"
+>
+  <a
+    href="/url/1"
+  >
+    <div
+      className="sc-dlnjPT egUXgI"
+    >
+      <div
+        className="sc-hKFyIo cvSBHa"
+      />
+      <div
+        className="sc-eCApGN fMQorY"
+      >
+        <div
+          className="sc-jSFkmK gpilit"
+        >
+          Título de Teste
+        </div>
+        <div
+          className="sc-gKAblj itjylz"
+        >
+          Descrição de teste
+        </div>
+        <div
+          className="sc-iCoHVE izPhX"
+        >
+          R$ 0.00
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+`;

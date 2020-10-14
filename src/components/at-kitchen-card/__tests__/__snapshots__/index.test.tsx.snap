@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`at-kitchen-card renders correctly 1`] = `
+Array [
+  <div
+    className="sc-bdnylx sc-gtssRu kcPoms cgEAKG"
+  >
+    3
+  </div>,
+  <div
+    className="sc-bdnylx kcPoms"
+  >
+    4
+  </div>,
+  <div
+    className="sc-bdnylx sc-dlnjPT sc-hKFyIo kcPoms iHznbp hpAWnk"
+  >
+    Obs.:
+  </div>,
+  <div
+    className="sc-bdnylx sc-dlnjPT kcPoms iHznbp"
+  >
+    item de teste
+  </div>,
+]
+`;
