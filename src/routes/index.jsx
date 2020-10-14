@@ -1,7 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ProductRegistration, UserLoginForm, UserRegForm } from '../components';
-import { CategoryPage, SubCategoryPage, ItemPage, OrderPage, KitchenPage } from '../pages';
+import {
+  CategoryPage,
+  SubCategoryPage,
+  ItemPage,
+  OrderPage,
+  KitchenPage,
+  TablePage,
+} from '../pages';
 
 const Routes = () => {
   return (
@@ -30,7 +37,9 @@ const Routes = () => {
       <Route path="/order">
         <OrderPage />
       </Route>
-      <Route path="/history">History</Route>
+      <Route path="/history">
+        <TablePage />
+      </Route>
       <Route path="/">
         <UserLoginForm />
       </Route>
