@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { add_item_to_order } from '../../redux/actions/order';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 interface Props {
   title?: string;
@@ -20,21 +20,19 @@ const CardItem = ({
   price = 109.2,
   image = 'https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291041_EP5L_c.jpg',
 }: Props) => {
-
   const [amount, setAmount] = useState(1);
   const [note, setNote] = useState('');
-  const{ itemId }: IUseParams = useParams();
+  const { itemId }: IUseParams = useParams();
 
   const handleClick = () => {
-    console.log({amount,itemId,note})
-    dispatch(add_item_to_order({amount,itemId:parseInt(itemId),note}))
+    dispatch(add_item_to_order({ amount, itemId: parseInt(itemId), note, name: title, price }));
   };
 
   const dispatch = useDispatch();
   return (
     <Container>
       <img style={{ width: '100%' }} src={image} />
-      
+
       <div>
         <h3>{title}</h3>
         <div style={{ padding: '15px' }}>{description}</div>
@@ -81,13 +79,13 @@ const Button = styled.button`
   font-size: calc(7px + 2vmin);
 `;
 const AddButton = styled(Button)`
-  padding:5px;
+  padding: 5px;
   width: 90%;
   height: 100%;
-  background-color:  #af4c51;
+  background-color: #af4c51;
   color: white;
   box-shadow: 0 6px #999;
-  border-radius:10px;
+  border-radius: 10px;
   &:hover {
     background-color: #8a3b3f;
   }
@@ -102,7 +100,7 @@ const AmountButton = styled(Button)`
   height: 100%;
   background-color: #b6b6b6;
   box-shadow: 0 6px #999;
-  border-radius:10px;
+  border-radius: 10px;
   &:active {
     box-shadow: 0 3px #666;
     transform: translateY(4px);

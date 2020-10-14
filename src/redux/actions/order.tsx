@@ -4,7 +4,7 @@ export const CLEAN_ORDERS = 'CLEAN_ORDERS';
 
 export interface IAdd_item_to_order {
   type: typeof ADD_ITEM;
-  newItem: { amount: number; itemId: number; note: string };
+  newItem: { amount: number; itemId: number; note: string; name: string; price: number };
 }
 
 export interface IRemove_item_from_order {
@@ -20,6 +20,8 @@ export interface Order {
   amount: number;
   itemId: number;
   note: string;
+  name: string;
+  price: number;
 }
 
 export type OrderItems = IAdd_item_to_order | IRemove_item_from_order | IClean_orders;
@@ -28,6 +30,8 @@ export const add_item_to_order = (newItem: {
   amount: number;
   itemId: number;
   note: string;
+  name: string;
+  price: number;
 }): IAdd_item_to_order => ({
   type: ADD_ITEM,
   newItem,
