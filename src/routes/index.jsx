@@ -8,6 +8,7 @@ import {
   OrderPage,
   KitchenPage,
   TablePage,
+  LoginPage
 } from '../pages';
 
 const Routes = () => {
@@ -41,7 +42,7 @@ const Routes = () => {
         <TablePage />
       </Route>
       <Route path="/">
-        <UserLoginForm />
+        <LoginPage />
       </Route>
     </Switch>
   );

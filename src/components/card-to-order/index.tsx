@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from '../styled-common';
 import { Content, CardImage, Wrapper, Title, Description, Price } from './styled';
-import { Link, useParams, useRouteMatch } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 
 interface Props {
   title: string;
