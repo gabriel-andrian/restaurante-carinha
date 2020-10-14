@@ -15,7 +15,7 @@ const TopMenu = () => {
           <Link to="/register" onClick={() => setVisibleDrawer(false)}>
             Cadastro
           </Link>,
-          <Link to="/login" onClick={() => setVisibleDrawer(false)}>
+          <Link to="/" onClick={() => setVisibleDrawer(false)}>
             Login
           </Link>,
         ]}

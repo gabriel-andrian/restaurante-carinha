@@ -6,8 +6,9 @@ import {
   SubCategoryPage,
   ItemPage,
   OrderPage,
-  LoginPage,
   KitchenPage,
+  TablePage,
+  LoginPage
 } from '../pages';
 
 const Routes = () => {
@@ -37,7 +38,9 @@ const Routes = () => {
       <Route path="/order">
         <OrderPage />
       </Route>
-      <Route path="/history">History</Route>
+      <Route path="/history">
+        <TablePage />
+      </Route>
       <Route path="/">
         <LoginPage />
       </Route>
