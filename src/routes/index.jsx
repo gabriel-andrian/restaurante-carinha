@@ -1,11 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ProductRegistration, UserLoginForm, UserRegForm } from '../components';
-import { CategoryPage, SubCategoryPage, ItemPage, OrderPage } from '../pages';
+import { CategoryPage, SubCategoryPage, ItemPage, OrderPage, KitchenPage } from '../pages';
 
 const Routes = () => {
   return (
     <Switch>
+      <Route path="/kitchen">
+        <KitchenPage />
+      </Route>
       <Route path="/product-registration">
         <ProductRegistration />
       </Route>
