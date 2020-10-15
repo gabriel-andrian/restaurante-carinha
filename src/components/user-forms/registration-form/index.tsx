@@ -20,9 +20,10 @@ const UserRegForm = () => {
       message.success('Cadastro feito com sucesso!');
       history.push("/");
     })
-    .catch(
-      message.error("Email já existente!", 3)
-    )
+    .catch(({ response }) => {
+      if ((response.status === 400)) {
+      message.error("Email já existente!", 3)}
+    })
   };
 
   useEffect(() => {
