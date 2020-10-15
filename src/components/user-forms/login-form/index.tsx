@@ -31,9 +31,8 @@ const UserLoginForm = ({ dataTables }: Props) => {
   const dispatch = useDispatch();
   const history = useHistory()
 
-  const token: string = useSelector((state: IReducer) => state.session.token);
+  const token: (string | null) = useSelector((state: IReducer) => state.session.token);
   token && history.push('/menu')
-  localStorage.setItem('token', token);
 
   const submitEmail = (data: IdataLogin) => {
     dispatch(requestSession(data));
