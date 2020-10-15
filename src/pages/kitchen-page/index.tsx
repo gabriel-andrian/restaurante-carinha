@@ -9,17 +9,17 @@ const kitchen = [
     orders: [
       {
         amount: 1,
-        itemId: 31,
+        name: 'coca',
         note: 'sem cebola',
       },
       {
         amount: 2,
-        itemId: 21,
+        name: 'coca',
         note: 'com limão e gelo',
       },
       {
         amount: 2,
-        itemId: 19,
+        name: 'coca',
         note: '',
       },
     ],
