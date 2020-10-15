@@ -4,10 +4,12 @@ export const ContainerTitle = styled.div`
   text-align: center;
   font-size: 20px;
   margin: 1em 2em;
+  color: white;
 `;
 
 export const H3Styled = styled.h3`
   text-align: center;
+  color: white;
 `;
 
 export const H3ErrorStyled = styled(H3Styled)`
@@ -41,9 +43,9 @@ export const InputSubmit = styled.input`
   max-height: 80px;
   width: 46vw;
   max-width: 200px;
-  background: #26c000;
+  background: darkorange;
+  color: white;
   border: 1px solid #000;
-  border-radius: 20px;
   font-size: 20px;
 `;
 
@@ -51,6 +53,7 @@ export const DivText = styled.div`
   text-align: center;
   font-size: 20px;
   margin: 1em 2em;
+  color: white;
 `;
 
 export const ContainerRegister = styled.div`
@@ -60,12 +63,12 @@ export const ContainerRegister = styled.div`
 `;
 
 export const ContainerLinkRegister = styled.div`
-  place-content: end center;
+  place-content: center;
   height: 10vh;
   max-height: 50px;
   width: 40vw;
   max-width: 180px;
-  background: lightgray;
+  background: darkorange;
+  color: white;
   border: 1px solid #000;
-  border-radius: 20px;
 `;

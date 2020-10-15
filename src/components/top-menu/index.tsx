@@ -22,10 +22,12 @@ const TopMenu = () => {
         visible={drawerVisible}
         setVisibleDrawer={setVisibleDrawer}
       />
-      <h1>Bienvenue!</h1>
+      <img src="https://www.kharina.com.br/app/images/logo_topo_nv.svg"></img>
+      {/* <h1>Bienvenue!</h1> */}
       <button
         style={{
           backgroundColor: 'transparent',
+          color: 'white',
           border: 'none',
           fontSize: '30px',
           outline: 'none',

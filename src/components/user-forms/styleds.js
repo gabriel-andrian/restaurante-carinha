@@ -6,6 +6,7 @@ export const ContainerForm = styled.form`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background: black;
 `;
 export const ButtonStyle = styled.input`
   place-content: end center;
@@ -13,12 +14,10 @@ export const ButtonStyle = styled.input`
   max-height: 80px;
   width: 46vw;
   max-width: 200px;
-  background: #4caf50;
+  background: darkorange;
   border: none;
   outline: none;
-  border-radius: 20px;
   font-size: 20px;
-  box-shadow: 0 9px #999;
   color: white;
   &:hover {
     background-color: #3e8e41;
