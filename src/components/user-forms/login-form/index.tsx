@@ -27,12 +27,8 @@ interface Props {
 const UserLoginForm = ({ dataTables }: Props) => {
   const { register, unregister, handleSubmit, setValue, errors } = useForm();
 
-  
   const dispatch = useDispatch();
-  const history = useHistory()
-
-  const token: (string | null) = useSelector((state: IReducer) => state.session.token);
-  token && history.push('/menu')
+  const history = useHistory();
 
   const submitEmail = (data: IdataLogin) => {
     dispatch(requestSession(data));
