@@ -5,7 +5,7 @@ import { KitchenPage } from '../../pages';
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/kitchen">
+      <Route path="/:kitchen">
         <KitchenPage />
       </Route>
     </Switch>
