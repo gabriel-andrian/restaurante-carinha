@@ -7,7 +7,7 @@ const order_list = (state = defaultState, action: OrderItems) => {
     case ADD_ITEM:
       return [...state, ...[action.newItem]];
     case REMOVE_ITEM:
-      return state.filter((item) => item.itemId !== action.item);
+      return state.filter((item, key) => key !== action.key_id);
     case CLEAN_ORDERS:
       return defaultState;
     default:

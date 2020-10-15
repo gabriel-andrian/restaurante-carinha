@@ -68,7 +68,7 @@ const Map = ({ type, list }: Props) => {
       <>
         {list &&
           list.map(({ amount, itemId, note }, index) => {
-            return <CardOrder amount={amount} itemId={itemId} note={note} key={index} />;
+            return <CardOrder amount={amount} itemId={itemId} note={note} key_id={index} key={index} />;
           })}
       </>
     );
