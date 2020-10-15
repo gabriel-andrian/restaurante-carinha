@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { UserRegForm } from '../../components';
+import { UserRegForm, LoginAdmin } from '../../components';
 import { LoginPage } from '../../pages';
 
 const Routes = () => {
@@ -10,7 +10,7 @@ const Routes = () => {
         <UserRegForm />
       </Route>
       <Route path="/login-restaurante">
-        <LoginPage />
+        <LoginAdmin />
       </Route>
       <Route exact path="/">
         <LoginPage />

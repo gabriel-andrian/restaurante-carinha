@@ -13,7 +13,7 @@ import {
   InputSubmit,
 } from './styled';
 
-const UserLoginForm = () => {
+const LoginAdmin = () => {
   const { register, unregister, handleSubmit, setValue, errors } = useForm();
 
   const dispatch = useDispatch();
@@ -33,7 +33,6 @@ const UserLoginForm = () => {
       },
     });
     register('password', { required: 'senha não pode estar em branco' });
-    register('table', { required: 'Selecione uma mesa' });
     return () => {
       unregister('email');
       unregister('password');
@@ -70,4 +69,4 @@ const UserLoginForm = () => {
   );
 };
 
-export default UserLoginForm;
+export default LoginAdmin;
