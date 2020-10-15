@@ -10,9 +10,13 @@ interface IUseParams {
 
 const ItemPage = () => {
   const { itemId }: IUseParams = useParams();
-  const { description, img, name, price }: any = useSelector(
-    (state: IReducer) => state.products.productsData.filter(({ id }: any) => id === itemId)[0]
+  let { description, img, name, price }: any = useSelector(
+    (state: IReducer) => state.products.productsData.filter(({ id }: any) => id === Number(itemId))[0]
   );
+
+  if (description){
+    description = ''
+  }
 
   return <CardItem title={name} description={description} image={img} price={price} />;
 };
