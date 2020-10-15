@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListToKitchen } from '../../components';
-import useSWR, { ConfigInterface } from 'swr';
+import useSWR from 'swr';
 import axios from 'axios';
 
 interface IData {
