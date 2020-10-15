@@ -32,6 +32,7 @@ const UserLoginForm = ({ dataTables }: Props) => {
 
   const submitEmail = (data: IdataLogin) => {
     dispatch(requestSession(data));
+    history.push('/menu');
   };
 
   useEffect(() => {
