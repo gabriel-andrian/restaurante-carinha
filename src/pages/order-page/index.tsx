@@ -7,7 +7,7 @@ import { add_finished_order } from '../../redux/actions/history';
 import { useHistory } from 'react-router-dom';
 import { Map, TotalPrice } from '../../components';
 import { Container, ContainerEmpty, ContainerButtom, Buttom } from './styled';
-import { Empty } from 'antd';
+import { Empty, message } from 'antd';
 
 const OrderPage = () => {
   const dispatch = useDispatch();
@@ -26,14 +26,24 @@ const OrderPage = () => {
         Authorization: `Bearer ${session.token}`,
       },
     });
-    api
-      .post('kitchen', dataOrder)
-      .then(() => (dispatch(add_finished_order(orders)), dispatch(clean_orders())));
+    api.post('kitchen', dataOrder).then(
+      () => (
+        dispatch(add_finished_order(orders)),
+        dispatch(clean_orders()),
+        message.success({
+          content: 'Seu pedido foi realizado com sucesso!',
+          className: 'custom-class',
+          style: {
+            marginTop: '20vh',
+          },
+        })
+      )
+    );
   };
 
   return orders.length === 0 ? (
     <ContainerEmpty>
-      <Empty />
+      <Empty description={'Sem pedidos'} />
     </ContainerEmpty>
   ) : (
     <Container>

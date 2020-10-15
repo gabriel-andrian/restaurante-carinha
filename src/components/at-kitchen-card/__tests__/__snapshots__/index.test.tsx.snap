@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`at-kitchen-card renders correctly 1`] = `
+exports[`at-kitchen-card renders correctly with note 1`] = `
 Array [
   <div
     className="sc-bdnylx sc-gtssRu kcPoms cgEAKG"
@@ -10,7 +10,7 @@ Array [
   <div
     className="sc-bdnylx kcPoms"
   >
-    4
+    nome de teste
   </div>,
   <div
     className="sc-bdnylx sc-dlnjPT sc-hKFyIo kcPoms iHznbp hpAWnk"
@@ -21,6 +21,31 @@ Array [
     className="sc-bdnylx sc-dlnjPT kcPoms iHznbp"
   >
     item de teste
+  </div>,
+]
+`;
+
+exports[`at-kitchen-card renders correctly without note 1`] = `
+Array [
+  <div
+    className="sc-bdnylx sc-gtssRu kcPoms cgEAKG"
+  >
+    3
+  </div>,
+  <div
+    className="sc-bdnylx kcPoms"
+  >
+    nome de teste
+  </div>,
+  <div
+    className="sc-bdnylx sc-dlnjPT sc-hKFyIo kcPoms iHznbp hpAWnk"
+  >
+    Obs.:
+  </div>,
+  <div
+    className="sc-bdnylx sc-dlnjPT kcPoms iHznbp"
+  >
+     - 
   </div>,
 ]
 `;
