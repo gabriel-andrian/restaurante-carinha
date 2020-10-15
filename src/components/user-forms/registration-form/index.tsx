@@ -1,14 +1,14 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import {ButtonStyle,InputStyle,ContainerForm} from '../styleds';
+import { ButtonStyle, InputStyle, ContainerForm } from '../styleds';
 import { message } from 'antd';
 import { useHistory } from 'react-router-dom';
 
 const UserRegForm = () => {
   const { register, unregister, handleSubmit, setValue, errors, watch } = useForm();
   let history = useHistory();
-  
+
   const submitEmail = (data: object) => {
     //e.preventDefault()
     const url = `https://json-server-order-here.herokuapp.com`;
@@ -16,13 +16,17 @@ const UserRegForm = () => {
       baseURL: url,
       headers: { 'Content-Type': 'application/json' },
     });
-    api.post('register', data).then(() => {
-      message.success('Cadastro feito com sucesso!');
-      history.push("/");
-    })
-    .catch(
-      message.error("Email já existente!", 3)
-    )
+    api
+      .post('register', data)
+      .then(() => {
+        message.success('Cadastro feito com sucesso!');
+        history.push('/');
+      })
+      .catch(({ response }) => {
+        if (response.status === 400) {
+          message.error('Email já existente!', 3);
+        }
+      });
   };
 
   useEffect(() => {
@@ -49,11 +53,10 @@ const UserRegForm = () => {
       unregister('password');
       unregister('passwordConf');
     };
-  }, [register, unregister]);
+  }, [register, unregister, watch]);
 
   return (
-    <ContainerForm
-      onSubmit={handleSubmit(submitEmail)}>
+    <ContainerForm onSubmit={handleSubmit(submitEmail)}>
       <InputStyle placeholder="Nome" onChange={(e) => setValue('name', e.target.value)} />
       {errors.name && <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.name.message}</h3>}
 
@@ -62,17 +65,18 @@ const UserRegForm = () => {
         <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.email.message}</h3>
       )}
 
-      <InputStyle 
-        placeholder="Senha" 
-        type='password' 
-        onChange={(e) => setValue('password', e.target.value)} />
+      <InputStyle
+        placeholder="Senha"
+        type="password"
+        onChange={(e) => setValue('password', e.target.value)}
+      />
       {errors.password && (
         <h3 style={{ color: 'red', textAlign: 'center' }}>{errors.password.message}</h3>
       )}
 
       <InputStyle
         placeholder="Confirmação de Senha"
-        type='password'
+        type="password"
         onChange={(e) => setValue('passwordConf', e.target.value)}
       />
       {errors.passwordConf && (
@@ -89,6 +93,5 @@ const UserRegForm = () => {
     </ContainerForm>
   );
 };
-
 
 export default UserRegForm;

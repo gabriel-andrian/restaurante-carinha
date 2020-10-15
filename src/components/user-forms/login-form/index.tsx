@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { IReducer } from '../../../redux/reducers';
 import { requestSession, IdataLogin } from '../../../redux/actions/login';
 import {
   ContainerTitle,
@@ -17,6 +18,7 @@ import {
 } from './styled';
 
 import Select from 'react-select';
+import { VoidExpression } from 'typescript';
 
 interface Props {
   dataTables: Array<any>;
@@ -24,13 +26,16 @@ interface Props {
 
 const UserLoginForm = ({ dataTables }: Props) => {
   const { register, unregister, handleSubmit, setValue, errors } = useForm();
-  const history = useHistory();
+
+  
   const dispatch = useDispatch();
+  const history = useHistory()
+
+  const token: (string | null) = useSelector((state: IReducer) => state.session.token);
+  token && history.push('/menu')
 
   const submitEmail = (data: IdataLogin) => {
     dispatch(requestSession(data));
-    //localStorage.setItem('token', res.data.accessToken);
-    history.push('/menu');
   };
 
   useEffect(() => {

@@ -31,7 +31,7 @@ const CardItem = ({
   const dispatch = useDispatch();
   return (
     <Container>
-      <img style={{ width: '100%' }} src={image} />
+      <img style={{ width: '100%' }} src={image} alt="" />
 
       <div>
         <h3>{title}</h3>

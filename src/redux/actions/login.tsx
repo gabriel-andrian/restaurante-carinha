@@ -1,7 +1,9 @@
 import axios from 'axios';
+import { message } from 'antd';
 
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
+
 
 export interface ILogin {
   type: typeof LOGIN;
@@ -23,6 +25,7 @@ export interface IdataLogin {
 }
 
 export const requestSession = (dataLogin: IdataLogin) => (dispatch: (arg: userSession) => void) => {
+
   const data = { email: dataLogin.email, password: dataLogin.password };
   const url = `https://json-server-order-here.herokuapp.com/`;
   const api = axios.create({
@@ -42,8 +45,14 @@ export const requestSession = (dataLogin: IdataLogin) => (dispatch: (arg: userSe
         },
       });
       axiosPath.patch(`/tables/${dataLogin.table}`, { avaliable: false });
+      message.success('Bem vindo');
+     
     })
-    .catch((error) => console.log(error));
+    .catch(({ response }) => {
+      if ((response.status = 401)) {
+        message.error('Credenciais Inválidas');
+      }
+    });
 };
 
 export const login = (token: string, email: string, table: number): ILogin => ({

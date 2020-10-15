@@ -1,35 +1,43 @@
 import React from 'react';
 import { ListToKitchen } from '../../components';
+import useSWR from 'swr';
+import axios from 'axios';
 
-// essa consta abaixo DEVE ser apagada porque apenas simula o retorno da API.
+interface IData {
+  table: number;
+  orders: Array<{
+    amount: number;
+    itemId: number;
+    note: string;
+    name: string;
+    price: number;
+  }>;
+}
 
-const kitchen = [
-  {
-    table: 10,
-    orders: [
-      {
-        amount: 1,
-        itemId: 31,
-        note: 'sem cebola',
-      },
-      {
-        amount: 2,
-        itemId: 21,
-        note: 'com limão e gelo',
-      },
-      {
-        amount: 2,
-        itemId: 19,
-        note: '',
-      },
-    ],
-  },
-];
+const fetcher: (arg: string) => void = async (fetchUrl: string) => {
+  const api = axios.create({
+    baseURL: 'http://json-server-order-here.herokuapp.com',
+    headers: { 'Content-Type': 'Application/json' },
+  });
+
+  const response = await api.get(fetchUrl);
+
+  return response.data;
+};
 
 const KitchenPage = () => {
-  return kitchen.map(({ table, orders }, key) => (
-    <ListToKitchen table={table} list={orders} key={key} />
-  ));
+  const url = 'http://json-server-order-here.herokuapp.com/kitchen';
+  const { data }: any = useSWR(url, fetcher, {
+    refreshInterval: 3000,
+  });
+
+  return data ? (
+    data.map(({ table, orders }: IData, key: number) => (
+      <ListToKitchen table={table} list={orders} key={key} />
+    ))
+  ) : (
+    <div>Loading kitchen orders...</div>
+  );
 };
 
 export default KitchenPage;
