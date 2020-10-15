@@ -33,7 +33,7 @@ const OrderPage = () => {
 
   return orders.length === 0 ? (
     <ContainerEmpty>
-      <Empty />
+      <Empty description={'Sem pedidos'} />
     </ContainerEmpty>
   ) : (
     <Container>
