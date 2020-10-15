@@ -8,18 +8,17 @@ if (ord !== null) {
 }
 
 const order_list = (state = defaultState, action: OrderItems) => {
-  console.log(ord);
   switch (action.type) {
     case ADD_ITEM:
       const newStateA = [...state, action.newItem];
       localStorage.setItem('order', JSON.stringify(newStateA));
       return newStateA;
     case REMOVE_ITEM:
-      const newStateR = state.filter((item, key) => key !== action.key_id);
+      const newStateR = state.filter((_, key) => key !== action.key_id);
       localStorage.setItem('order', JSON.stringify(newStateR));
       return newStateR;
     case CLEAN_ORDERS:
-      localStorage.setItem('order', '');
+      localStorage.removeItem('order');
       return defaultState;
     default:
       return state;

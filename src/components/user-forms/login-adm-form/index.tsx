@@ -21,7 +21,6 @@ const LoginAdmin = () => {
 
   const submitEmail = (data: IdataLogin) => {
     dispatch(requestSession(data));
-    history.push('/kitchen');
   };
 
   useEffect(() => {
