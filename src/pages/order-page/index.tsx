@@ -26,9 +26,10 @@ const OrderPage = () => {
         Authorization: `Bearer ${session.token}`,
       },
     });
-    api
-      .post('kitchen', dataOrder)
-      .then(() => (dispatch(add_finished_order(orders)), dispatch(clean_orders())));
+    api.post('kitchen', dataOrder).then(() => {
+      dispatch(add_finished_order(orders));
+      dispatch(clean_orders());
+    });
   };
 
   return orders.length === 0 ? (
