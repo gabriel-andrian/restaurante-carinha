@@ -10,9 +10,10 @@ export const Wrapper = styled.div`
   place-content: center flex-start;
   place-items: center;
   border-radius: 5px;
-  box-shadow: 3px 0 5px rgb(242, 242, 242), -3px 0 5px rgb(242, 242, 242),
-    0 3px 5px rgb(242, 242, 242), 0 -3px 5px rgb(242, 242, 242);
+  box-shadow: 3px 0 2px rgb(242, 242, 242), -3px 0 2px rgb(242, 242, 242),
+    0 3px 2px rgb(242, 242, 242), 0 -3px 2px rgb(242, 242, 242);
   overflow: hidden;
+  background: #eee;
 `;
 
 export const Title = styled.div`
@@ -25,6 +26,13 @@ export const Title = styled.div`
   font-size: 45px;
   font-variant: small-caps;
   font-weight: 500;
+  display: flex;
+  place-content: center center;
+`;
+
+export const FirstTitle = styled(Title)`
+  padding: 0 15px;
+  place-content: center space-between;
 `;
 
 export const OrderContent = styled.div`
@@ -52,4 +60,19 @@ export const QuantityTitle = styled(ItemTitle)`
   width: 30%;
   font-weight: bold;
   border-bottom: 2px solid #aaa;
+`;
+
+export const Position = styled.div`
+  font-size: 40px;
+`;
+export const ToRemoveCardIcon = styled.div`
+  font-size: 40px;
+  color: #e3762d;
+  cursor: pointer;
+
+  & svg {
+    &:hover {
+      fill: green;
+    }
+  }
 `;
