@@ -23,11 +23,13 @@ export const InputEmail = styled.input`
   border: 2px solid #f2f2f2;
   padding-left: 10px;
   font-size: 20px;
+  color: black;
 `;
 
 export const InputPassword = styled(InputEmail)`
   font-family: 'sans-serif';
   outline: none;
+  color: black;
 `;
 
 export const ContainerSubmit = styled.div`
