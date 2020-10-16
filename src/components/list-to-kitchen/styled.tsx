@@ -10,9 +10,10 @@ export const Wrapper = styled.div`
   place-content: center flex-start;
   place-items: center;
   border-radius: 5px;
-  box-shadow: 3px 0 5px rgb(242, 242, 242), -3px 0 5px rgb(242, 242, 242),
-    0 3px 5px rgb(242, 242, 242), 0 -3px 5px rgb(242, 242, 242);
+  box-shadow: 3px 0 2px rgb(242, 242, 242), -3px 0 2px rgb(242, 242, 242),
+    0 3px 2px rgb(242, 242, 242), 0 -3px 2px rgb(242, 242, 242);
   overflow: hidden;
+  background: #eee;
 `;
 
 export const Title = styled.div`
