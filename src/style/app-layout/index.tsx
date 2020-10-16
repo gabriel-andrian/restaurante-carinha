@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+interface Props {
+  visibility?: boolean;
+  type?: string;
+}
+
 export const Container = styled.div`
   position: fixed;
   height: 100vh;
@@ -26,8 +31,8 @@ export const Header = styled.div`
 `;
 
 export const Content = styled.div`
-  margin: 8vh 0 100px 0;
-  height: 150vh;
+  margin: ${({ type }: Props) => (type !== 'client' ? '8vh 0 0 0' : '8vh 0 100px 0')};
+  height: ${({ type }: Props) => (type !== 'client' ? '100%' : '150vh')};
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -37,11 +42,13 @@ export const Content = styled.div`
   background-color: #333;
 
   @media (min-width: 450px) {
-    margin: 100px 0;
+    height: ${({ type }: Props) => (type !== 'client' ? '100%' : '150vh')};
+    margin: ${({ type }: Props) => (type !== 'client' ? '100px 0 0 0' : '100px 0 100px 0')};
   }
 `;
 
 export const Footer = styled.div`
+  visibility: ${({ visibility }: Props) => (visibility ? 'visible' : 'hidden')};
   position: fixed;
   bottom: 0;
   width: 100vw;
