@@ -29,7 +29,7 @@ const fetcher: (arg: string) => void = async (fetchUrl: string) => {
 const KitchenPage = () => {
   const url = 'http://json-server-order-here.herokuapp.com/kitchen';
   const { data }: any = useSWR(url, fetcher, {
-    refreshInterval: 3000,
+    refreshInterval: 1000,
   });
 
   return data ? (
