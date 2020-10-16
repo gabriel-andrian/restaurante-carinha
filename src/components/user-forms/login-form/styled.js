@@ -46,6 +46,7 @@ export const InputSubmit = styled.input`
   background: darkorange;
   color: white;
   border: 1px solid #000;
+  border-radius: 8px;
   font-size: 20px;
 `;
 

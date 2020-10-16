@@ -19,6 +19,8 @@ export const ButtonStyle = styled.input`
   outline: none;
   font-size: 20px;
   color: white;
+  border-radius: 8px;
+
   &:hover {
     background-color: #3e8e41;
   }

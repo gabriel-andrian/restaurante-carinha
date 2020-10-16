@@ -41,9 +41,9 @@ export const InputSubmit = styled.input`
   max-height: 80px;
   width: 46vw;
   max-width: 200px;
-  background: #26c000;
+  background: darkorange;
   border: 1px solid #000;
-  border-radius: 20px;
+  border-radius: 8px;
   font-size: 20px;
 `;
 
@@ -68,4 +68,11 @@ export const ContainerLinkRegister = styled.div`
   background: lightgray;
   border: 1px solid #000;
   border-radius: 20px;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column nowrap;
+  place-content: center center;
+  color: #ddd;
 `;

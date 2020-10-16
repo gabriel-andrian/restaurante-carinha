@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { requestSession, IdataLogin } from '../../../redux/actions/login';
 import {
+  Wrapper,
   ContainerTitle,
   H3Styled,
   H3ErrorStyled,
@@ -39,32 +40,28 @@ const LoginAdmin = () => {
   }, [register, unregister]);
 
   return (
-    <>
+    <Wrapper>
       <form onSubmit={handleSubmit(submitEmail)}>
         <ContainerTitle>
           Seja bem vindo! <div>Faça seu login para acessar a fila dos pedidos na cozinha:</div>
         </ContainerTitle>
-        <div>
-          {errors.email ? (
-            <H3ErrorStyled>{errors.email.message}</H3ErrorStyled>
-          ) : (
-            <H3Styled>E-mail:</H3Styled>
-          )}
-          <InputEmail onChange={(e) => setValue('email', e.target.value)} />
-        </div>
-        <div>
-          {errors.password ? (
-            <H3ErrorStyled>{errors.password.message}</H3ErrorStyled>
-          ) : (
-            <H3Styled>Senha:</H3Styled>
-          )}
-          <InputPassword onChange={(e) => setValue('password', e.target.value)} type="password" />
-        </div>
+        <Wrapper>
+          {errors.email && <H3ErrorStyled>{errors.email.message}</H3ErrorStyled>}
+          <InputEmail placeholder={'e-mail'} onChange={(e) => setValue('email', e.target.value)} />
+        </Wrapper>
+        <Wrapper>
+          {errors.password && <H3ErrorStyled>{errors.password.message}</H3ErrorStyled>}
+          <InputPassword
+            onChange={(e) => setValue('password', e.target.value)}
+            type="password"
+            placeholder={'senha'}
+          />
+        </Wrapper>
         <ContainerSubmit>
           <InputSubmit type="submit" value="LOGAR" />
         </ContainerSubmit>
       </form>
-    </>
+    </Wrapper>
   );
 };
 

@@ -59,41 +59,39 @@ const UserLoginForm = ({ dataTables }: Props) => {
           Seja bem vindo <div>Faça seu login para continuar:</div>
         </ContainerTitle>
         <div>
-          {errors.email ? (
-            <H3ErrorStyled>{errors.email.message}</H3ErrorStyled>
-          ) : (
-              <H3Styled>E-mail:</H3Styled>
-            )}
-          <InputEmail onChange={(e) => setValue('email', e.target.value)} />
+          {errors.email && <H3ErrorStyled>{errors.email.message}</H3ErrorStyled>}
+          <InputEmail placeholder={'e-mail'} onChange={(e) => setValue('email', e.target.value)} />
         </div>
         <div>
-          {errors.password ? (
-            <H3ErrorStyled>{errors.password.message}</H3ErrorStyled>
-          ) : (
-              <H3Styled>Senha:</H3Styled>
-            )}
-          <InputPassword onChange={(e) => setValue('password', e.target.value)} type="password" />
+          {errors.password && <H3ErrorStyled>{errors.password.message}</H3ErrorStyled>}
+          <InputPassword
+            placeholder={'senha'}
+            onChange={(e) => setValue('password', e.target.value)}
+            type="password"
+          />
         </div>
         <div>
           {errors.table ? (
             <H3ErrorStyled>{errors.table.message}</H3ErrorStyled>
           ) : (
-              <H3Styled>Mesa:</H3Styled>
-            )}
-          <div style={{ 
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            height: '11vh',
-            maxHeight: '80px',
-            width: '46vw',
-            maxWidth: '250px',
+            <H3Styled>Mesa:</H3Styled>
+          )}
+          <div
+            style={{
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              height: '11vh',
+              maxHeight: '80px',
+              width: '46vw',
+              maxWidth: '250px',
             }}>
             <Select
               defaultValue={null}
               onChange={({ id }: any) => setValue('table', id)}
               options={dataTables}
               ref={register}
-            /></div>
+            />
+          </div>
         </div>
         <div>
           <ContainerSubmit>
@@ -102,10 +100,9 @@ const UserLoginForm = ({ dataTables }: Props) => {
         </div>
         <DivText>Ainda não tem Cadastro?</DivText>
         <ContainerRegister>
-            <Link style={{fontSize: '20px'}}
-              to="/register">
-              Registre-se
-            </Link>
+          <Link style={{ fontSize: '20px' }} to="/register">
+            Registre-se
+          </Link>
         </ContainerRegister>
       </form>
     </>
