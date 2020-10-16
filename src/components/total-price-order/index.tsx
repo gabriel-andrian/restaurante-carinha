@@ -5,7 +5,6 @@ import { TotalPriceDiv } from './styled';
 
 const TotalPrice = () => {
   const orders: any[] = useSelector((state: IReducer) => state.order_list);
-  // TODO: forEach amount * price / +
   return <TotalPriceDiv>Total: </TotalPriceDiv>;
 };
 
