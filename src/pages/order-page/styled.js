@@ -25,7 +25,7 @@ export const Buttom = styled.button`
   width: 100%;
   height: calc(40px + 4vmin);
   font-size: calc(14px + 3vmin);
-  background-color: red;
+  background-color: #af4c51;
   color: white;
   outline: none;
   border: none;

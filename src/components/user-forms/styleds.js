@@ -6,7 +6,7 @@ export const ContainerForm = styled.form`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: black;
+  background: #333;
 `;
 export const ButtonStyle = styled.input`
   place-content: end center;

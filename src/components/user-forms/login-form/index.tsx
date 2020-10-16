@@ -56,7 +56,7 @@ const UserLoginForm = ({ dataTables }: Props) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(submitEmail)} style={{ backgroundColor: 'black' }}>
+      <form onSubmit={handleSubmit(submitEmail)} style={{ backgroundColor: '#333' }}>
         <ContainerTitle>
           Seja bem vindo <div>Faça seu login para continuar:</div>
         </ContainerTitle>
@@ -104,16 +104,10 @@ const UserLoginForm = ({ dataTables }: Props) => {
         </div>
         <DivText>Ainda não tem Cadastro?</DivText>
         <ContainerRegister>
-          <ContainerLinkRegister>
-            <Link
-              style={{
-                fontSize: '20px',
-                color: 'white',
-              }}
+            <Link style={{fontSize: '20px'}}
               to="/register">
-              CADASTRAR
+              Registre-se
             </Link>
-          </ContainerLinkRegister>
         </ContainerRegister>
       </form>
     </>
