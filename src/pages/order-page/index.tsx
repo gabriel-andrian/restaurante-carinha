@@ -5,7 +5,7 @@ import { IReducer } from '../../redux/reducers';
 import { clean_orders } from '../../redux/actions/order';
 import { add_finished_order } from '../../redux/actions/history';
 import { useHistory } from 'react-router-dom';
-import { Map, TotalPrice } from '../../components';
+import { Map } from '../../components';
 import { Container, ContainerEmpty, ContainerButtom, Buttom, ContainerPedidos } from './styled';
 import { Empty, message } from 'antd';
 
