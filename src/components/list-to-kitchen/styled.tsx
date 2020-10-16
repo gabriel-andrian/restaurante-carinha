@@ -26,6 +26,13 @@ export const Title = styled.div`
   font-size: 45px;
   font-variant: small-caps;
   font-weight: 500;
+  display: flex;
+  place-content: center center;
+`;
+
+export const FirstTitle = styled(Title)`
+  padding: 0 15px;
+  place-content: center space-between;
 `;
 
 export const OrderContent = styled.div`
@@ -53,4 +60,12 @@ export const QuantityTitle = styled(ItemTitle)`
   width: 30%;
   font-weight: bold;
   border-bottom: 2px solid #aaa;
+`;
+
+export const Position = styled.div`
+  font-size: 40px;
+`;
+export const ToRemoveCardIcon = styled.div`
+  font-size: 40px;
+  color: #e3762d;
 `;

@@ -33,7 +33,7 @@ const KitchenPage = () => {
 
   return data ? (
     data.map(({ table, orders }: IData, key: number) => (
-      <ListToKitchen table={table} list={orders} key={key} />
+      <ListToKitchen table={table} list={orders} position={key + 1} key={key} />
     ))
   ) : (
     <div>Loading kitchen orders...</div>
