@@ -14,7 +14,7 @@ const TablePage = () => {
   const dispatch = useDispatch();
   const history: any = useSelector((state: IReducer) => state.history);
   const session: any = useSelector((state: IReducer) => state.session);
-  console.log(session);
+
   const handleClick = () => {
     const axiosPath = axios.create({
       baseURL: `https://json-server-order-here.herokuapp.com/`,
@@ -23,13 +23,16 @@ const TablePage = () => {
         Authorization: `Bearer ${session.token}`,
       },
     });
+
     axiosPath.patch(`/tables/${session.table}`, { avaliable: true }).then(() => {
       dispatch(logout());
       dispatch(clean_history());
       dispatch(clean_orders());
+      localStorage.clear();
       hookHistory.push('/');
     });
   };
+
   return (
     <Container>
       <p>Mesa {session.table}</p>

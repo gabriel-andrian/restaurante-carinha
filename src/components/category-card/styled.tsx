@@ -25,7 +25,7 @@ export const Image = styled.div`
 
 export const Title = styled.div`
   height: 20%;
-  font-size: large;
-  font-weight: bolder;
-  padding-top: 0.2em;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 0;
 `;

@@ -10,12 +10,13 @@ const UserRegForm = () => {
   let history = useHistory();
 
   const submitEmail = (data: object) => {
-    //e.preventDefault()
+    // e.preventDefault()
     const url = `https://json-server-order-here.herokuapp.com`;
     const api = axios.create({
       baseURL: url,
       headers: { 'Content-Type': 'application/json' },
     });
+
     api
       .post('register', data)
       .then(() => {
@@ -53,7 +54,7 @@ const UserRegForm = () => {
       unregister('password');
       unregister('passwordConf');
     };
-  }, [register, unregister, watch]);
+  }, [register, unregister]);
 
   return (
     <ContainerForm onSubmit={handleSubmit(submitEmail)}>
