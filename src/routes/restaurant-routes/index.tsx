@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Header, Content, Footer } from '../../style/app-layout';
-import { TopMenu } from '../../components';
+import { TopMenuPrivate } from '../../components';
 import Routes from './routes';
 
 const RestaurantRoutes = () => {
   return (
     <Container>
       <Header>
-        <TopMenu />
+        <TopMenuPrivate />
       </Header>
       <Content type={'restaurant'}>
         <Routes />
