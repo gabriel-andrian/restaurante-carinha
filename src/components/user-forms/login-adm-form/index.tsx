@@ -27,8 +27,8 @@ const LoginAdmin = () => {
     register('email', {
       required: 'e-mail não pode estar em branco',
       pattern: {
-        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-        message: 'formato de e-mail inválido',
+        value: /^admin@kenzie.com$/,
+        message: 'usuário não autorizado',
       },
     });
     register('password', { required: 'senha não pode estar em branco' });
@@ -69,3 +69,5 @@ const LoginAdmin = () => {
 };
 
 export default LoginAdmin;
+
+// /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
