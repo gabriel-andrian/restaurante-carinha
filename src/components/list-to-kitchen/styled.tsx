@@ -68,4 +68,11 @@ export const Position = styled.div`
 export const ToRemoveCardIcon = styled.div`
   font-size: 40px;
   color: #e3762d;
+  cursor: pointer;
+
+  & svg {
+    &:hover {
+      fill: green;
+    }
+  }
 `;

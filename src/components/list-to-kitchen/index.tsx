@@ -1,6 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import axios from 'axios';
 import { IKitchenCardProps } from '../at-kitchen-card';
 import { AtKitchenCard } from '../';
+import { IoIosRocket } from 'react-icons/io';
+import { IReducer } from '../../redux/reducers';
+import { notification } from 'antd';
 import {
   Wrapper,
   Title,
@@ -11,20 +16,39 @@ import {
   ToRemoveCardIcon,
   FirstTitle,
 } from './styled';
-import { IoIosRocket } from 'react-icons/io';
 
 export interface IListToKitchenProps {
   list: IKitchenCardProps[];
   table: number | string;
   position: number;
+  id: number;
 }
 
-const ListToKitchen = ({ table, list, position }: IListToKitchenProps) => {
+const ListToKitchen = ({ table, list, position, id }: IListToKitchenProps) => {
+  const token = useSelector((state: IReducer) => state.session.token);
+
+  const handleOnClick = async () => {
+    const useAxios = axios.create({
+      baseURL: `http://json-server-order-here.herokuapp.com/kitchen/`,
+      headers: {
+        'Content-Type': 'Application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    useAxios.delete(`${id}`).then(() => {
+      notification.success({
+        message: 'Pedido concluído',
+        description: `O pedido ${position} saiu para a mesa`,
+      });
+    });
+  };
+
   return (
     <Wrapper>
       <FirstTitle>
         <Position>#{position}</Position>
-        <ToRemoveCardIcon>
+        <ToRemoveCardIcon onClick={handleOnClick}>
           <IoIosRocket />
         </ToRemoveCardIcon>
       </FirstTitle>

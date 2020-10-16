@@ -12,6 +12,7 @@ interface IData {
     name: string;
     price: number;
   }>;
+  id: number;
 }
 
 const fetcher: (arg: string) => void = async (fetchUrl: string) => {
@@ -32,8 +33,8 @@ const KitchenPage = () => {
   });
 
   return data ? (
-    data.map(({ table, orders }: IData, key: number) => (
-      <ListToKitchen table={table} list={orders} position={key + 1} key={key} />
+    data.map(({ table, orders, id }: IData, key: number) => (
+      <ListToKitchen table={table} list={orders} position={key + 1} key={key} id={id} />
     ))
   ) : (
     <div>Loading kitchen orders...</div>
