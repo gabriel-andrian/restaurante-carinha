@@ -18,6 +18,9 @@ const TopMenu = () => {
           <Link to="/" onClick={() => setVisibleDrawer(false)}>
             Login
           </Link>,
+          <Link to="/login-restaurante" onClick={() => setVisibleDrawer(false)}>
+            Login admin
+          </Link>,
         ]}
         visible={drawerVisible}
         setVisibleDrawer={setVisibleDrawer}

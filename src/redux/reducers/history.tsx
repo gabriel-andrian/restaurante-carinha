@@ -1,12 +1,18 @@
 import { ADD_FINISHED_ORDER, CLEAN_HISTORY, actionType } from '../actions/history';
 
-const defaultState: any[] = [];
+let defaultState: any[] = [];
+
+const previousHistory = localStorage.getItem('history');
+if (previousHistory) defaultState = JSON.parse(previousHistory);
 
 const history = (state = defaultState, action: actionType) => {
   switch (action.type) {
     case ADD_FINISHED_ORDER:
-      return [...state, ...action.newFinishedOrder];
+      const newState = [...state, ...action.newFinishedOrder];
+      localStorage.setItem('history', JSON.stringify(newState));
+      return newState;
     case CLEAN_HISTORY:
+      localStorage.removeItem('history');
       return defaultState;
     default:
       return state;
