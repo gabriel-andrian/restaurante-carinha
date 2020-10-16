@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { CategoryCard, CardToOrder, CardOrder } from '../';
+import { CategoryCard, CardToOrder, CardOrder, CardHistory } from '../';
 const toLink = (str: string) =>
   str
     .toLowerCase()
@@ -68,7 +68,22 @@ const Map = ({ type, list }: Props) => {
       <>
         {list &&
           list.map(({ amount, itemId, note }, index) => {
-            return <CardOrder amount={amount} itemId={itemId} note={note} key_id={index} key={index} />;
+            return (
+              <CardOrder amount={amount} itemId={itemId} note={note} key_id={index} key={index} />
+            );
+          })}
+      </>
+    );
+  }
+
+  if (type === 'history') {
+    return (
+      <>
+        {list &&
+          list.map(({ amount, itemId, note }, index) => {
+            return (
+              <CardHistory amount={amount} itemId={itemId} note={note} key_id={index} key={index} />
+            );
           })}
       </>
     );

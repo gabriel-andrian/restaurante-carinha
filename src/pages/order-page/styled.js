@@ -30,3 +30,11 @@ export const Buttom = styled.button`
   outline: none;
   border: none;
 `;
+
+export const ContainerPedidos = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`;

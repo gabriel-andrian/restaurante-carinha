@@ -6,7 +6,7 @@ import { clean_orders } from '../../redux/actions/order';
 import { add_finished_order } from '../../redux/actions/history';
 import { useHistory } from 'react-router-dom';
 import { Map, TotalPrice } from '../../components';
-import { Container, ContainerEmpty, ContainerButtom, Buttom } from './styled';
+import { Container, ContainerEmpty, ContainerButtom, Buttom, ContainerPedidos } from './styled';
 import { Empty, message } from 'antd';
 
 const OrderPage = () => {
@@ -34,7 +34,7 @@ const OrderPage = () => {
           content: 'Seu pedido foi realizado com sucesso!',
           className: 'custom-class',
           style: {
-            marginTop: '20vh',
+            marginTop: '6vh',
           },
         })
       )
@@ -47,11 +47,12 @@ const OrderPage = () => {
     </ContainerEmpty>
   ) : (
     <Container>
-      <Map type={'orders'} list={orders} />
+      <ContainerPedidos>
+        <Map type={'orders'} list={orders} />
+      </ContainerPedidos>
       <ContainerButtom>
         <button onClick={() => history.push('/menu')}>Adicionar novo item</button>
       </ContainerButtom>
-      <TotalPrice />
       <Buttom onClick={handleSubmit}>Finalizar Pedido</Buttom>
     </Container>
   );

@@ -37,7 +37,7 @@ const TablePage = () => {
     <Container>
       <p>Mesa {session.table}</p>
       <div>
-        <Map type="orders" list={history} />
+        <Map type="history" list={history} />
       </div>
       <button onClick={() => handleClick()}>Encerrar mesa</button>
     </Container>
