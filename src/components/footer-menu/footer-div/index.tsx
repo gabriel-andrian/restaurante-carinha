@@ -1,7 +1,6 @@
 import React from 'react';
 import { ContainerFooterMenu } from './styled.js';
 
-// O componente abaixo foi criado para teste, necessita ser ou refeito, ou adaptado para corresponder ao protótipo do figma;
 interface Props{
   actions?: Array<React.ReactNode>
 }
