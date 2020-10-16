@@ -92,7 +92,7 @@ const AddButton = styled(Button)`
     background-color: #8a3b3f;
   }
   &:active {
-    background-color: #8a3b3f;
+    background-color: #af4c51;
     box-shadow: 0 3px #666;
     transform: translateY(4px);
   }
@@ -117,6 +117,7 @@ const Container = styled.div`
   width: 100%;
   height: fit-content;
   font-size: calc(7px + 2vmin);
+  background-color: #eee;
   & > div {
     padding: 30px;
   }

@@ -30,15 +30,33 @@ export const InnerDrawerContent = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
+  background-color: #333;
+
 `;
 export const TitleDrawerContent = styled.div`
   height: 20%;
   width: 100%;
-  background-color: orange;
+  background-color: darkorange;
 `;
 export const BottomDrawerContent = styled.div`
     display:flex;
     flex-direction:column;
     padding:10%;
+    & a {
+      text-decoration: none;
+  
+      &:link {
+        color: white;
+      }
+      &:visited {
+        color: white;
+      }
+      &:hover {
+        color: white;
+      }
+      &:active {
+        color: white;
+      }
+    }
 
 `;

@@ -25,10 +25,12 @@ const TopMenu = () => {
         visible={drawerVisible}
         setVisibleDrawer={setVisibleDrawer}
       />
-      <h1>Bienvenue!</h1>
+        <img src="https://i.ibb.co/JmW5bnW/CARINHA.png"></img>
+      {/* <h1>Bienvenue!</h1> */}
       <button
         style={{
           backgroundColor: 'transparent',
+          color: 'white',
           border: 'none',
           fontSize: '30px',
           outline: 'none',

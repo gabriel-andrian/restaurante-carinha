@@ -34,6 +34,7 @@ export const Content = styled.div`
   align-content: flex-start;
   align-items: flex-start;
   overflow: auto;
+  background-color: #333;
 
   @media (min-width: 450px) {
     margin: 100px 0;

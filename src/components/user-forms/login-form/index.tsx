@@ -54,53 +54,58 @@ const UserLoginForm = ({ dataTables }: Props) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(submitEmail)}>
+      <form onSubmit={handleSubmit(submitEmail)} style={{ backgroundColor: '#333' }}>
         <ContainerTitle>
-          Seja bem vindo! <div>Faça seu login para continuar:</div>
+          Seja bem vindo <div>Faça seu login para continuar:</div>
         </ContainerTitle>
         <div>
           {errors.email ? (
             <H3ErrorStyled>{errors.email.message}</H3ErrorStyled>
           ) : (
-            <H3Styled>E-mail:</H3Styled>
-          )}
+              <H3Styled>E-mail:</H3Styled>
+            )}
           <InputEmail onChange={(e) => setValue('email', e.target.value)} />
         </div>
         <div>
           {errors.password ? (
             <H3ErrorStyled>{errors.password.message}</H3ErrorStyled>
           ) : (
-            <H3Styled>Senha:</H3Styled>
-          )}
+              <H3Styled>Senha:</H3Styled>
+            )}
           <InputPassword onChange={(e) => setValue('password', e.target.value)} type="password" />
         </div>
         <div>
           {errors.table ? (
             <H3ErrorStyled>{errors.table.message}</H3ErrorStyled>
           ) : (
-            <H3Styled>Mesa:</H3Styled>
-          )}
-          <Select
-            defaultValue={null}
-            onChange={({ id }: any) => setValue('table', id)}
-            options={dataTables}
-            ref={register}
-          />
+              <H3Styled>Mesa:</H3Styled>
+            )}
+          <div style={{ 
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            height: '11vh',
+            maxHeight: '80px',
+            width: '46vw',
+            maxWidth: '250px',
+            }}>
+            <Select
+              defaultValue={null}
+              onChange={({ id }: any) => setValue('table', id)}
+              options={dataTables}
+              ref={register}
+            /></div>
         </div>
-        <ContainerSubmit>
-          <InputSubmit type="submit" value="LOGAR" />
-        </ContainerSubmit>
+        <div>
+          <ContainerSubmit>
+            <InputSubmit type="submit" value="LOGAR" />
+          </ContainerSubmit>
+        </div>
         <DivText>Ainda não tem Cadastro?</DivText>
         <ContainerRegister>
-          <ContainerLinkRegister>
-            <Link
-              style={{
-                fontSize: '30px',
-              }}
+            <Link style={{fontSize: '20px'}}
               to="/register">
-              Clique aqui
+              Registre-se
             </Link>
-          </ContainerLinkRegister>
         </ContainerRegister>
       </form>
     </>
