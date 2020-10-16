@@ -13,6 +13,7 @@ import Map from './map';
 import TotalPrice from './total-price-order';
 import AtKitchenCard from './at-kitchen-card';
 import ListToKitchen from './list-to-kitchen';
+import LoginAdmin from './user-forms/login-adm-form';
 
 export {
   TopMenu,
@@ -30,4 +31,5 @@ export {
   TotalPrice,
   AtKitchenCard,
   ListToKitchen,
+  LoginAdmin,
 };
