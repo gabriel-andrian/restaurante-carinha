@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Content } from '../../style/app-layout';
+import { Container, Header, Content, Footer } from '../../style/app-layout';
 import { TopMenu } from '../../components';
 import Routes from './routes';
 
@@ -9,9 +9,10 @@ const RestaurantRoutes = () => {
       <Header>
         <TopMenu />
       </Header>
-      <Content>
+      <Content type={'restaurant'}>
         <Routes />
       </Content>
+      <Footer visibility={false} />
     </Container>
   );
 };

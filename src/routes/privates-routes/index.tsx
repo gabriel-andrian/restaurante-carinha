@@ -9,10 +9,10 @@ const PrivatesRoutes = () => {
       <Header>
         <TopMenu />
       </Header>
-      <Content>
+      <Content type={'client'}>
         <Routes />
       </Content>
-      <Footer>
+      <Footer visibility={true}>
         <FooterMenu />
       </Footer>
     </Container>
