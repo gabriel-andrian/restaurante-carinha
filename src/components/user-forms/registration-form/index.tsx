@@ -44,7 +44,7 @@ const UserRegForm = () => {
     });
     register('passwordConf', {
       required: 'Confirmação de senha não pode estar em branco *',
-      validate: (value) => value === watch('password') || 'Confirmação de senha difere *',
+      validate: (value) => value === watch('password') || 'Confirmação de senha diferente',
     });
 
     return () => {

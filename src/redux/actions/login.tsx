@@ -43,11 +43,23 @@ export const requestSession = (dataLogin: IdataLogin) => (dispatch: (arg: userSe
         },
       });
       axiosPath.patch(`/tables/${dataLogin.table}`, { avaliable: false });
-      message.success('Bem vindo');
+      message.success({
+        content: 'Seja Bem-Vindo',
+        className: 'custom-class',
+        style: {
+          marginTop: '6vh',
+        },
+      });
     })
     .catch(({ response }) => {
       if ((response.status = 401)) {
-        message.error('Credenciais Inválidas');
+        message.error({
+          content: 'Credenciais inválidas',
+          className: 'custom-class',
+          style: {
+            marginTop: '6vh',
+          },
+        });
       }
     });
 };

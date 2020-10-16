@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Header, Content, Footer } from '../../style/app-layout';
-import { TopMenu, FooterMenu } from '../../components';
+import { TopMenuPrivate, FooterMenu } from '../../components';
 import Routes from './routes';
 
 const PrivatesRoutes = () => {
   return (
     <Container>
       <Header>
-        <TopMenu />
+        <TopMenuPrivate />
       </Header>
       <Content type={'client'}>
         <Routes />

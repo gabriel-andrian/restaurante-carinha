@@ -14,6 +14,8 @@ import TotalPrice from './total-price-order';
 import AtKitchenCard from './at-kitchen-card';
 import ListToKitchen from './list-to-kitchen';
 import LoginAdmin from './user-forms/login-adm-form';
+import CardHistory from './card-history';
+import TopMenuPrivate from './top-menu-private';
 
 export {
   TopMenu,
@@ -32,4 +34,6 @@ export {
   AtKitchenCard,
   ListToKitchen,
   LoginAdmin,
+  CardHistory,
+  TopMenuPrivate,
 };

@@ -45,7 +45,7 @@ const TablePage = () => {
         display: 'flex',
         }}>Mesa {session.table}</div>
       <div>
-        <Map type="orders" list={history} />
+        <Map type="history" list={history} />
       </div>
       <button onClick={() => handleClick()} 
       style={{
