@@ -14,10 +14,10 @@ const Routes = () => {
       <Route path="/menu">
         <CategoryPage />
       </Route>
-      <Route path="/order">
+      <Route path="/pedido">
         <OrderPage />
       </Route>
-      <Route path="/history">
+      <Route path="/mesa">
         <TablePage />
       </Route>
     </Switch>

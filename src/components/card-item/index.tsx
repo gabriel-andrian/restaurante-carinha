@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { add_item_to_order } from '../../redux/actions/order';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 interface Props {
   title?: string;
@@ -23,9 +23,11 @@ const CardItem = ({
   const [amount, setAmount] = useState(1);
   const [note, setNote] = useState('');
   const { itemId }: IUseParams = useParams();
+  const history = useHistory();
 
   const handleClick = () => {
     dispatch(add_item_to_order({ amount, itemId: parseInt(itemId), note, name: title, price }));
+    history.push('/menu');
   };
 
   const dispatch = useDispatch();
