@@ -25,11 +25,3 @@ const CategoryCard = ({ name, img, onClick, category }: CategoryProps) => {
 };
 
 export default CategoryCard;
-
-/*
-Onde e no que o Henrique mexeu:
-
-1. import do Link;
-2. inseri um <Link> </Link> ao redor do container (estou em dúvida se não era o caso de colocar em volta de todo o Card);
-3. Nas routes eu removi o onClick que tinha lá, este: onClick={() => history.push(`/sub-menu/${category}`)}
-*/

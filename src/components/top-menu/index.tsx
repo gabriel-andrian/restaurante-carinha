@@ -4,8 +4,6 @@ import { Drawer } from '../index';
 import { HiOutlineMenu } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 
-// O componente abaixo foi criado para teste, necessita ser ou refeito, ou adaptado para corresponder ao protótipo do figma;
-
 const TopMenu = () => {
   const [drawerVisible, setVisibleDrawer] = useState(false);
   return (
@@ -26,7 +24,6 @@ const TopMenu = () => {
         setVisibleDrawer={setVisibleDrawer}
       />
         <img src="https://i.ibb.co/JmW5bnW/CARINHA.png"></img>
-      {/* <h1>Bienvenue!</h1> */}
       <button
         style={{
           backgroundColor: 'transparent',

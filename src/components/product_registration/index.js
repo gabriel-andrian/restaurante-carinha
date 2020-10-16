@@ -22,8 +22,6 @@ const ProductRegistration = () => {
       });
   };
 
-  //////////////////produtos
-
   const [product, setProduct] = useState('');
   const [product_url, setProduct_url] = useState('');
   const [price, setPrice] = useState('');

@@ -10,7 +10,6 @@ const UserRegForm = () => {
   let history = useHistory();
 
   const submitEmail = (data: object) => {
-    // e.preventDefault()
     const url = `https://json-server-order-here.herokuapp.com`;
     const api = axios.create({
       baseURL: url,

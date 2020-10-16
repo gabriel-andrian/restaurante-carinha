@@ -35,19 +35,32 @@ const TablePage = () => {
 
   return (
     <Container>
-      <p>Mesa {session.table}</p>
+      <div style={{
+        padding:'2px', 
+        margin: '10px', 
+        backgroundColor: '#eee',
+        fontSize: '20px',
+        placeContent: 'end center',
+        width: '46vw',
+        display: 'flex',
+        }}>Mesa {session.table}</div>
       <div>
         <Map type="orders" list={history} />
       </div>
-      <button onClick={() => handleClick()}>Encerrar mesa</button>
+      <button onClick={() => handleClick()} 
+      style={{
+        marginBottom: '10px',
+        width: '80%',
+        maxWidth: '400px',
+        lineHeight: '3em',
+        margin: '1em 2em',
+        color: '#af4c51',
+        fontSize: '20px',
+      }}>Pedir a conta</button>
     </Container>
   );
 };
 
-/* 
-    passar no list do map arr
-    
-*/
 const Container = styled.div`
   display: flex;
   flex-direction: column;
