@@ -1,0 +1,404 @@
+{
+  "products": [
+    {
+      "name": "Club kharina",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291043_gjlM_c.jpg",
+      "description": "Sanduíche aberto no prato com ovo, batatas fritas tipo noisette e smashed burger. Mix de folhas verdes, tomate, pepino agridoce, queijo prato derretido, bacon tostado, maionese e pão de forma tostado.",
+      "price": 35.5,
+      "category": "classicos",
+      "id": 1
+    },
+    {
+      "name": "Club rock",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291041_EP5L_c.jpg",
+      "description": "Sanduíche aberto no prato com ovo, batatas fritas tipo noisette e smashed burger. Mix de folhas verdes, tomate, cebola caramelizada com barbecue, pepino agridoce, queijo prato derretido, bacon tostado, maionese e pão de forma tostado",
+      "price": 39.8,
+      "category": "classicos",
+      "id": 2
+    },
+    {
+      "name": "Club chicken",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001300946_gEfe_c.jpg",
+      "description": "Sanduíche aberto no prato com ovo, batatas fritas tipo noisette e frango grelhado. Mix de folhas verdes, tomate, pepino agridoce, queijo prato derretido, bacon tostado, maionese e pão de forma tostado.",
+      "price": 35.5,
+      "category": "classicos",
+      "id": 3
+    },
+    {
+      "name": "Club mignon",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291041_FLq4_c.jpg",
+      "description": "Sanduíche aberto no prato com ovo, batatas fritas tipo noisette e mignon grelhado. Mix de folhas verdes, tomate, cebola caramelizada com barbecue, pepino agridoce, queijo prato derretido, bacon tostado, maionese e pão de forma tostado.",
+      "price": 39.8,
+      "category": "classicos",
+      "id": 4
+    },
+    {
+      "name": "Bife de chorizo",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202003200853_rEoF_g.jpg",
+      "description": "Bife de chorizo - acompanha arroz branco e batata rústica",
+      "price": 59.8,
+      "category": "steaks",
+      "id": 5
+    },
+    {
+      "name": "Entrecôte",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202003200914_X6uR_r.jpg",
+      "description": "Entrecôte - acompanha spaghetti na manteiga e fritas",
+      "price": 59.8,
+      "category": "steaks",
+      "id": 6
+    },
+    {
+      "name": "Frango",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202003200855_iEYN_k.jpg",
+      "description": "Frango - acompanha arroz branco e fritas",
+      "price": 37.5,
+      "category": "steaks",
+      "id": 7
+    },
+    {
+      "name": "Mignon",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202003200900_21Cq_m.png",
+      "description": "Mignon - acompanha arroz branco e farofa",
+      "price": 49.5,
+      "category": "steaks",
+      "id": 8
+    },
+    {
+      "name": "Picanha",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202003200900_kEiZ_g.jpg",
+      "description": "Picanha - acompanha arrozbranco e batata rústica",
+      "price": 59.8,
+      "category": "steaks",
+      "id": 9
+    },
+    {
+      "name": "Batata noisette média",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291044_1vW8_n.jpg",
+      "description": "Batata noisette média. Acompanha: maionese especial KHARINA.",
+      "price": 14.9,
+      "category": "entrada",
+      "id": 10
+    },
+    {
+      "name": "Buffalo wings",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202002120910_21Tn_k.jpg",
+      "description": "Coxinha de frango temperada com molho picante de barbecue. Acompanha: maionese especial Kharina.",
+      "price": 37.5,
+      "category": "entrada",
+      "id": 11
+    },
+    {
+      "name": "Chicken crispy",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291048_X0UI_c.jpg",
+      "description": "02 Filés de frango empanados acompanhados de maionese especial KHARINA.",
+      "price": 24.5,
+      "category": "entrada",
+      "id": 12
+    },
+    {
+      "name": "Kibe frito",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291049_rmjz_k.jpg",
+      "description": "06 unidades. Acompanha: molho de limão.",
+      "price": 18.5,
+      "category": "entrada",
+      "id": 13
+    },
+    {
+      "name": "Mini pastéis",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162009_wBlO_m.jpg",
+      "description": "06 unidades: 02 de carne; 02 de queijo; 02 mistos. acompanha: geleia de pimenta.",
+      "price": 16.5,
+      "category": "entrada",
+      "id": 14
+    },
+    {
+      "name": "Salada caesar pequena",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291050_GdMS_s.jpg",
+      "description": "Tradicional mix de folhas verdes acompanhado de croutons e coberto com parmesão, além do nosso típico molho caesar artesanal.",
+      "price": 12.5,
+      "category": "entrada",
+      "id": 15
+    },
+    {
+      "name": "Tiras de batata temperadas",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291051_enJX_t.jpg",
+      "description": "Acompanha: geleia de pimenta e maionese especial KHARINA.",
+      "price": 19.5,
+      "category": "entrada",
+      "id": 16
+    },
+    {
+      "name": "Tiras de picanha",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291051_FxxI_p.jpg",
+      "description": "Acompanha: farofa, maionese especial KHARINA e pão crocante.",
+      "price": 57.5,
+      "category": "entrada",
+      "id": 17
+    },
+    {
+      "name": "Apple pie",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291104_LAcD_a.jpg",
+      "description": "Torta de maçã.",
+      "price": 19.8,
+      "category": "sobremesa",
+      "id": 18
+    },
+    {
+      "name": "Brownie",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162116_kiWT_b.jpg",
+      "description": "Brownie de chocolate.",
+      "price": 17.5,
+      "category": "sobremesa",
+      "id": 19
+    },
+    {
+      "name": "Minibrigadeiro",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291104_hqSV_m.jpg",
+      "description": "Minibrigadeiro para comer com colher.",
+      "price": 4.5,
+      "category": "sobremesa",
+      "id": 20
+    },
+    {
+      "name": "Coca-cola - 350ml",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162115_tGWu_r.jpg",
+      "description": "",
+      "price": 6.4,
+      "category": "bebida",
+      "id": 21
+    },
+    {
+      "name": "Sprite - 350ml",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162115_tGWu_r.jpg",
+      "description": "",
+      "price": 6.4,
+      "category": "bebida",
+      "id": 22
+    },
+    {
+      "name": "Fanta Laranja - 350ml",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162115_tGWu_r.jpg",
+      "description": "",
+      "price": 6.4,
+      "category": "bebida",
+      "id": 23
+    },
+    {
+      "name": "Soda italiana - 400ml",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291107_7qdS_s.png",
+      "description": "Cranberry.",
+      "price": 8.0,
+      "category": "bebida",
+      "id": 24
+    },
+    {
+      "name": "Suco de Laranja - 400ml",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162115_ojO0_s.jpg",
+      "description": "",
+      "price": 9.0,
+      "category": "bebida",
+      "id": 25
+    },
+    {
+      "name": "Água sem gás",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162115_Dt4K_a.jpg",
+      "description": "",
+      "price": 4.8,
+      "category": "bebida",
+      "id": 26
+    },
+    {
+      "name": "Classic burger",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291037_R57t_c.jpg",
+      "description": "Pão crocante, smashed burger, queijo tipo cheddar derretido, mix de folhas verdes, tomate e maionese especial kharina.",
+      "price": 28.8,
+      "category": "burgers",
+      "id": 27
+    },
+    {
+      "name": "Hamburger do futuro",
+      "img": "",
+      "description": "Pão vegano crocante, hamburger 115g produzido com a proteína da ervilha, soja e grão de bico, queijo tipo cheddar derretido, mix de folhas verdes, tomate e maionese vegana especial Kharina.",
+      "price": 33.0,
+      "category": "burgers",
+      "id": 28
+    },
+    {
+      "name": "Classic burger bacon",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001300945_mCDi_c.jpg",
+      "description": "Pão crocante, smashed burger, queijo tipo cheddar derretido, bacon, mix de folhas verdes, tomate e maionese especial kharina.",
+      "price": 31.5,
+      "category": "burgers",
+      "id": 29
+    },
+    {
+      "name": "Cheddar burger",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001300944_xn5N_c.jpg",
+      "description": "Pão crocante, smashed burger, creme de cheddar, bacon tostado e cebola crispy.",
+      "price": 31.5,
+      "category": "burgers",
+      "id": 30
+    },
+    {
+      "name": "Americano",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001300944_nDkH_a.jpg",
+      "description": "Pão crocante, 2 smashed burgers, queijo tipo cheddar, cebola caramelizada, ovo, bacon e maionese especial kharina.",
+      "price": 35.5,
+      "category": "burgers",
+      "id": 31
+    },
+    {
+      "name": "Handyman",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001300945_3hHF_h.jpg",
+      "description": "Pão crocante, 2 smashed burgers, queijo tipo cheddar, cebola crispy, bacon e maionese especial kharina.",
+      "price": 33.5,
+      "category": "burgers",
+      "id": 32
+    },
+    {
+      "name": "Rock burger",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001300946_3K2N_r.jpg",
+      "description": "Pão crocante, smashed burger, queijo tipo cheddar derretido, bacon, cebola caramelizada e molho barbecue.",
+      "price": 31.5,
+      "category": "burgers",
+      "id": 33
+    },
+    {
+      "name": "Cheese mignon",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001300945_7tTz_c.jpg",
+      "description": "Pão brioche, delicioso grelhado de mignon, alface crespa, tomate, queijo prato, cebola e maionese especial kharina.",
+      "price": 31.5,
+      "category": "burgers",
+      "id": 34
+    },
+    {
+      "name": "Cheese frango",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001300944_tVKY_c.jpg",
+      "description": "Pão brioche, frango grelhado, alface crespa, tomate, queijo prato e maionese especial kharina.",
+      "price": 24.5,
+      "category": "burgers",
+      "id": 35
+    },
+    {
+      "name": "Cheese burger",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162111_qK1D_c.jpg",
+      "description": "Pão brioche, smashed burger, queijo prato e maionese especial kharina.",
+      "price": 22.5,
+      "category": "burgers",
+      "id": 36
+    },
+    {
+      "name": "Cheese salada",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/201912162111_6X9l_c.jpg",
+      "description": "Pão brioche, smashed burger, alface crespa, tomate, queijo prato, cebola e maionese especial kharina.",
+      "price": 24.5,
+      "category": "burgers",
+      "id": 37
+    },
+    {
+      "name": "Penne à matriciana",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291055_ZEaZ_p.jpg",
+      "description": "Massa penne com molho de tomate, bacon, manjericão e queijo parmesão.",
+      "price": 35.5,
+      "category": "massas",
+      "id": 38
+    },
+    {
+      "name": "Spaghetti com frango",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291055_gicj_s.jpg",
+      "description": "Massa spaghetti com molho branco, ervilha fresca, filé de frango em cubos e rúcula.",
+      "price": 35.5,
+      "category": "massas",
+      "id": 39
+    },
+    {
+      "name": "Spaghetti com salmão",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291056_MGFy_s.jpg",
+      "description": "Massa spaghetti com molho branco, ervilha fresca, salmão defumado e rúcula.",
+      "price": 39.5,
+      "category": "massas",
+      "id": 40
+    },
+    {
+      "name": "Spaghetti primavera",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291056_G5sv_s.jpg",
+      "description": "Massa spaghetti com muçarela de búfala, azeitonas pretas, manjericão fresco e molho ao sugo.",
+      "price": 36.8,
+      "category": "massas",
+      "id": 41
+    },
+    {
+      "name": "Caprese",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202002061200_pgVe_s.png",
+      "description": "Mix de folhas verdes crocantes acompanhado de muçarela de búfala, tomatinhos cereja, tomates secos e croûtons. Coberto com nosso molho caseiro italiano.",
+      "price": 27.9,
+      "category": "saladas",
+      "id": 42
+    },
+    {
+      "name": "Caesar",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202002061200_dOG1_c.png",
+      "description": "Tradicional mix de folhas verdes crocantes acompanhado de croûtons e coberto com parmesão, além do nosso típico molho caesar artesanal.",
+      "price": 24.9,
+      "category": "saladas",
+      "id": 43
+    },
+    {
+      "name": "Salmão defumado",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291059_tVax_s.jpg",
+      "description": "Mix de folhas verdes crocantes acompanhado por tiras de salmão defumado e honey mustard.",
+      "price": 28.9,
+      "category": "saladas",
+      "id": 44
+    },
+    {
+      "name": "Manga",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291058_5J1g_s.jpg",
+      "description": "Mix de folhas verdes crocantes acompanhado de manga, coberto de queijo parmesão e com nosso molho especial rosé.",
+      "price": 23.9,
+      "category": "saladas",
+      "id": 45
+    },
+    {
+      "name": "Massa com escalopinho de mignon",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291100_aK7C_m.jpg",
+      "description": "Acompanha: queijo ralado.",
+      "price": 24.9,
+      "category": "kids",
+      "id": 46
+    },
+    {
+      "name": "Sandubinhas",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291101_kIXk_s.jpg",
+      "description": "Dois sanduichinhos com hamburger, queijo e maionese especial Kharina. Acompanha: batatas fritas tipo noisette.",
+      "price": 24.9,
+      "category": "kids",
+      "id": 47
+    },
+    {
+      "name": "Filé de frango empanado",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291059_GqhQ_f.jpg",
+      "description": "02 unidades. Acompanha: batatas fritas tipo noisette e maionese especial KHARINA.",
+      "price": 20.5,
+      "category": "kids",
+      "id": 48
+    },
+    {
+      "name": "Massa e molho à sua escolha",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291100_ROpE_m.jpg",
+      "description": "Acompanha: queijo ralado.",
+      "price": 20.5,
+      "category": "kids",
+      "id": 49
+    },
+    {
+      "name": "Escalopinho de mignon",
+      "img": "https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291102_dCen_e.jpg",
+      "description": "Escalopinho de mignon com arroz e batatas fritas tipo noisette.",
+      "price": 24.9,
+      "category": "kids",
+      "id": 50
+    }
+  ]
+}
