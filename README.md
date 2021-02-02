@@ -29,7 +29,7 @@
  <a href="#-autor">Autor</a>
 </p>
 
-# Grupo
+# 👥 Grupo
 
 Projeto em grupo para conclusão do front-end na Kenzie Academy Brasil.
 
@@ -39,7 +39,7 @@ Projeto em grupo para conclusão do front-end na Kenzie Academy Brasil.
 - <strong>Gabriel V. Andrian - Quality Assurance (QA)</strong>
 - Joao Ricardo Cavali - Dev
 
-# MVP
+# 💡 MVP
 
 Como produto mínimo viável nossa plataforma inicialmente permitirá fazer o pedido com identificação da mesa e organizar a fila de pedidos na cozinha.
 
