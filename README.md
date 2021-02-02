@@ -1,44 +1,108 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center" >
+    <img src="https://i.ibb.co/JmW5bnW/CARINHA.png" alt=carinhas />
+</div>
 
-## Available Scripts
+<div align="center"> 
+    <img src="https://img.shields.io/github/issues/gabriel-andrian/restaurante-carinha" alt="issues">
+    <img src="https://img.shields.io/github/forks/gabriel-andrian/restaurante-carinha" alt="forks">
+    <img src="https://img.shields.io/github/stars/gabriel-andrian/restaurante-carinha" alt="stars">
+    <img src="https://img.shields.io/github/license/gabriel-andrian/restaurante-carinha" alt="license">    
+</div>
+<br>
 
-In the project directory, you can run:
+<h1>Usuário:</h1>
+<div align="center">
+    <img src="./src/img/costumer-side.gif" alt="collection-gif" >
+</div>
 
-### `yarn start`
+<br>
+<h1>Admin:</h1>
+<div align="center">
+    <img src="./src/img/client-side.gif" alt="collection-gif" >
+</div>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center" style="padding: 20px 0px" >
+ <a href="#-grupo">Grupo</a> •
+ <a href="#-mvp">MVP</a> •
+ <a href="#-começando">Começando</a> •
+ <a href="#-tecnologias">Tecnologias</a> •  
+ <a href="#-autor">Autor</a>
+</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Grupo
 
-### `yarn test`
+Projeto em grupo para conclusão do front-end na Kenzie Academy Brasil.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Lucas Morais de Sousa - Product Owner (PO)
+- Henrique Delavi Daum - Scrum Master
+- Denis Rafael Korb - Tech Lead
+- <strong>Gabriel V. Andrian - Quality Assurance (QA)</strong>
+- Joao Ricardo Cavali - Dev
 
-### `yarn build`
+# MVP
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Como produto mínimo viável nossa plataforma inicialmente permitirá fazer o pedido com identificação da mesa e organizar a fila de pedidos na cozinha.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# 🚀 Começando
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Esse é um exemplo de como ter uma copia e rodar o projeto localmente. Siga os passos descritos a seguir:
 
-### `yarn eject`
+```bash
+# Clone este repositório
+$ git clone https://github.com/gabriel-andrian/restaurante-carinha
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Acesse a pasta do projeto no terminal/cmd
+$ cd restaurante-carinha
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Instale as dependências
+$ yarn install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
 
-## Learn More
+# 🛠 Tecnologias
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Ferramentas usadas na construção do projeto:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [VSCode](https://code.visualstudio.com/)
+- [Git](https://git-scm.com)
+- [React](https://pt-br.reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [react-router-dom](https://reactrouter.com/web/guides/quick-start)
+- [Styled-Components](https://styled-components.com/)
+- [AntDesign](https://ant.design/)
+- [Axios](https://github.com/axios/axios)
+
+<div align="center">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="javascript">
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="Typescript">
+
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="react">
+<img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux">
+<img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="ubuntu">
+   
+</div>
+
+# 👨🏽‍💻 Autor
+
+<div align="center">
+<a href="https://www.linkedin.com/in/gabriel-andrian/"> 
+  <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gabriel-andrian/"> 
+</a>
+
+<a href="https://gitlab.com/gabriel_andrian"> 
+  <img src="https://img.shields.io/badge/-GitLab-white?style=flat-square&logo=gitlab&logoColor=white&link=https://gitlab.com/gabriel_andrian"> 
+</a>
+</div>
+
+## Sobre mim
+
+Formado em Engenharia de Controle e Automação, com experiência em uma empresa focada em desenvolvimento de projetos e soluções para a área de automação industrial, onde tive maior contato com a programação, decidi então mudar de área e me tornar um programador.
+
+Atualmente faço um curso super intensivo na Kenzie Academy Brasil de formação de 2000 horas onde estou aprendendo: HTML5, CSS3, JavaScript, Typscript, React, Node JS, Python, Flask, Django, Banco de Dados, entre outras hard skills e soft skills.
