@@ -1,8 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import CategoryCard from '../category-card';
-import CardToOrder from '../card-to-order';
-
+import { CategoryCard, CardToOrder, CardOrder, CardHistory } from '../';
 const toLink = (str: string) =>
   str
     .toLowerCase()
@@ -23,12 +21,14 @@ interface Props {
     description: string;
     price: number | string;
     id: number;
+    amount: number;
+    itemId: number;
+    note: string;
   }>;
 }
 
 const Map = ({ type, list }: Props) => {
   const params: { category: string } = useParams();
-
   if (type === 'category') {
     return (
       <>
@@ -60,6 +60,31 @@ const Map = ({ type, list }: Props) => {
                 />
               );
             })}
+      </>
+    );
+  }
+  if (type === 'orders') {
+    return (
+      <>
+        {list &&
+          list.map(({ amount, itemId, note }, index) => {
+            return (
+              <CardOrder amount={amount} itemId={itemId} note={note} key_id={index} key={index} />
+            );
+          })}
+      </>
+    );
+  }
+
+  if (type === 'history') {
+    return (
+      <>
+        {list &&
+          list.map(({ amount, itemId, note }, index) => {
+            return (
+              <CardHistory amount={amount} itemId={itemId} note={note} key_id={index} key={index} />
+            );
+          })}
       </>
     );
   }

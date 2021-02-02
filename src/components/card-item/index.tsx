@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { add_item_to_order } from '../../redux/actions/order';
+import { useParams, useHistory } from 'react-router-dom';
 
 interface Props {
   title?: string;
@@ -9,39 +10,31 @@ interface Props {
   price?: number;
   image?: string;
 }
+interface IUseParams {
+  itemId: string;
+}
 
 const CardItem = ({
   title = 'Titulo',
-  description = `Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-  Modi expedita provident nemo quae vel aut similique!
-  Laudantium illum autem labore quia eaque iure maxime deserunt qui itaque! 
-  Possimus, aut impedit?
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-  Modi expedita provident nemo quae vel aut similique! 
-  Laudantium illum autem labore quia eaque iure maxime deserunt qui itaque! 
-  Possimus, aut impedit?
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-  Modi expedita provident nemo quae vel aut similique! 
-  Laudantium illum autem labore quia eaque iure maxime deserunt qui itaque! 
-  Possimus, aut impedit?
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-  Modi expedita provident nemo quae vel aut similique! 
-  Laudantium illum autem labore quia eaque iure maxime deserunt qui itaque! 
-  Possimus, aut impedit?
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-  Modi expedita provident nemo quae vel aut similique! 
-  Laudantium illum autem labore quia eaque iure maxime deserunt qui itaque! 
-  Possimus, aut impedit?`,
+  description = `description`,
   price = 109.2,
   image = 'https://static-images.ifood.com.br/image/upload/t_medium/pratos/3e7c211c-4c71-4ced-aeac-ef8d3ed55898/202001291041_EP5L_c.jpg',
 }: Props) => {
   const [amount, setAmount] = useState(1);
   const [note, setNote] = useState('');
-  const handleClick = () => {};
+  const { itemId }: IUseParams = useParams();
+  const history = useHistory();
+
+  const handleClick = () => {
+    dispatch(add_item_to_order({ amount, itemId: parseInt(itemId), note, name: title, price }));
+    history.push('/menu');
+  };
+
   const dispatch = useDispatch();
   return (
     <Container>
-      <img style={{ width: '100%' }} src={image} />
+      <img style={{ width: '100%' }} src={image} alt="" />
+
       <div>
         <h3>{title}</h3>
         <div style={{ padding: '15px' }}>{description}</div>
@@ -52,9 +45,9 @@ const CardItem = ({
       <div
         style={{
           display: 'flex',
-          height: '50px',
+          height: '100%',
           flexFlow: 'row',
-          width: '80%',
+          width: '90%',
           justifyContent: 'space-around',
         }}>
         <div
@@ -69,7 +62,7 @@ const CardItem = ({
           <AmountButton onClick={() => setAmount(amount + 1)}>+</AmountButton>
         </div>
         <div style={{ width: '48%', display: 'flex', justifyContent: 'flex-end' }}>
-          <AddButton onClick={() => dispatch(add_item_to_order(amount))}>
+          <AddButton onClick={() => handleClick()}>
             Add{' '}
             {(amount * price).toLocaleString('pt-BR', {
               minimumFractionDigits: 2,
@@ -88,15 +81,32 @@ const Button = styled.button`
   font-size: calc(7px + 2vmin);
 `;
 const AddButton = styled(Button)`
-  width: 70%;
+  padding: 5px;
+  width: 90%;
   height: 100%;
-  background-color: green;
+  background-color: #af4c51;
   color: white;
+  box-shadow: 0 6px #999;
+  border-radius: 10px;
+  &:hover {
+    background-color: #8a3b3f;
+  }
+  &:active {
+    background-color: #af4c51;
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+  }
 `;
 const AmountButton = styled(Button)`
   width: 30%;
   height: 100%;
-  background-color: grey;
+  background-color: #b6b6b6;
+  box-shadow: 0 6px #999;
+  border-radius: 10px;
+  &:active {
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+  }
 `;
 
 const Container = styled.div`
@@ -107,6 +117,7 @@ const Container = styled.div`
   width: 100%;
   height: fit-content;
   font-size: calc(7px + 2vmin);
+  background-color: #eee;
   & > div {
     padding: 30px;
   }

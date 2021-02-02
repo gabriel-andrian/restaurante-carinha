@@ -8,6 +8,7 @@ export const Card = styled.div`
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #eee;
 
   @media (min-width: 450px) {
     width: 300px;
